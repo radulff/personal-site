@@ -2,18 +2,21 @@ import Image from 'next/image';
 import { GitHubIcon, TwitterIcon, LinkCard, GitLabIcon } from './icons';
 import data from './data.json';
 import logo from '../../../public/white-logo.png';
+import Link from 'next/link';
 
 export default async function Links() {
 	return (
 		<div className="flex items-center flex-col mx-auto w-full justify-center px-8 pb-4 text-black">
-			<Image
-				priority
-				className="rounded-full"
-				alt={data.name}
-				src={logo}
-				width={400}
-				height={400}
-			/>
+			<Link href="/">
+				<Image
+					priority
+					className="rounded-full"
+					alt={data.name}
+					src={logo}
+					width={400}
+					height={400}
+				/>
+			</Link>
 			{/* <h1 className="font-bold mt-4 mb-8 text-xl text-white">{data.name}</h1> */}
 			{data.links.map((link) => (
 				<LinkCard key={link.href} {...link} />
