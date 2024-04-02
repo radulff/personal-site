@@ -1,0 +1,60 @@
+{
+	"name": "Raül Vila",
+	"title": "Software Engineer",
+	"subtitle": "Dumbass lolete",
+	"links": [
+		{
+			"href": "https://audicity.io/",
+			"title": "Audicity",
+			"image": ""
+		},
+		{
+			"href": "https://atlasexplorer.io/",
+			"title": "Atlas Explorer",
+			"image": ""
+		},
+		{
+			"href": "https://radxu.org/",
+			"title": "Radxu Foundation",
+			"image": ""
+		},
+		{
+			"href": "https://app.radxu.org/",
+			"title": "Radxu Foundation - dApp",
+			"image": ""
+		},
+		{
+			"href": "https://virtuabroker.com/",
+			"title": "VirtuaBroker",
+			"image": ""
+		},
+		{
+			"href": "https://buycrypto.virtuabroker.com/",
+			"title": "Buy Crypto With VirtuaBroker",
+			"image": ""
+		},
+		{
+			"href": "https://plastiks.io/",
+			"title": "Plastiks",
+			"image": ""
+		}
+	],
+	"socials": [
+		{
+			"href": "https://linkedin.com/in/raulvila",
+			"title": "LinkedIn"
+		},
+		{
+			"href": "https://x.com/_radulff",
+			"title": "Twitter"
+		},
+		{
+			"href": "https://github.com/radulff",
+			"title": "Github"
+		},
+		{
+			"href": "https://gitlab.com/radulff",
+			"title": "Gitlab"
+		}
+	]
+}
