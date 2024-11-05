@@ -1,0 +1,635 @@
+{
+	"layout": {
+		"header": {
+			"navElements": {
+				"home": "Home",
+				"business": "For Businesses",
+				"individuals": "For Individuals",
+				"about": "About me",
+				"links": "Links"
+			},
+			"cta": "Contact me"
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Customized Solutions to Establish or Improve Your Online Presence",
+			"subtitle": "We transform your vision into a successful digital presence. From website creation to marketing strategies, we help you stand out online and achieve your business goals.",
+			"links": "Links",
+			"hero": {
+				"title": "Welcome to My Digital Space",
+				"subtitle": "Software Engineer, Consultant, and Digital Entrepreneur"
+			},
+			"services": {
+				"title": "Services & Expertise",
+				"subtitle": "Discover how I can help you achieve your goals through various services and expertise areas",
+				"cards": {
+					"business": {
+						"title": "Business Services",
+						"description": "Consultancy, Development, and Strategic Growth"
+					},
+					"individual": {
+						"title": "Individual Services",
+						"description": "Personal Growth, Mentoring, and Development"
+					},
+					"portfolio": {
+						"title": "Developer Portfolio",
+						"description": "Check out my latest projects and technical work"
+					}
+				}
+			},
+			"about": {
+				"title": "About Me",
+				"description": "I'm a passionate software engineer and consultant with expertise in web development, blockchain technology, and digital transformation. I help businesses and individuals achieve their goals through technology and strategic guidance."
+			},
+			"cta": {
+				"learnMore": "Learn More",
+				"contact": "Contact Me",
+				"links": "My Links"
+			}
+		},
+		"about": {
+			"contact": {
+				"title": "Connect",
+				"subtitle": "We look forward to hearing from you.",
+				"form": {
+					"labels": {
+						"name": "Your name",
+						"email": "Your email",
+						"subject": "Subject",
+						"message": "Message"
+					},
+					"recaptchaNode": "This site is protected by reCAPTCHA and the Google [Privacy Policy](privacy-policy) and [Terms of Service](terms).",
+					"buttonSubmit": "Contact"
+				},
+				"contactMe": {
+					"title": "Contact Me",
+					"description1": "For any inquiries or collaboration opportunities, feel free to reach out to me via email:",
+					"email": "your-email@example.com",
+					"description2": "I'm looking forward to hearing from you!",
+					"embedDescription": "Following is an inline cal.com embed"
+				}
+			},
+			"developerPortfolio": {
+				"main": {
+					"title": "My Portfolio"
+				},
+				"projectsTitle": "Project Details",
+				"projects": [
+					{
+						"id": 1,
+						"title": "Project 1",
+						"image": "project1.jpg",
+						"description": "Short description of Project 1",
+						"details": "Detailed information about Project 1",
+						"skills": ["Skill 1", "Skill 2"]
+					},
+					{
+						"id": 2,
+						"title": "Project 2",
+						"image": "project2.jpg",
+						"description": "Short description of Project 2",
+						"details": "Detailed information about Project 2",
+						"skills": ["Skill 1", "Skill 2"]
+					}
+				],
+				"expertise": "Extensive experience in web development, digital marketing, and business consultancy.",
+				"background": "Over 10 years of experience in helping businesses grow their online presence and improve their operational efficiency.",
+				"approach": "A client-centric approach focused on delivering tailored solutions to meet specific business needs.",
+				"skillsTitle": "Skills",
+				"skills": ["Skill 1", "Skill 2", "Skill 3", "Skill 4"]
+			},
+			"title": "About Me",
+			"whoAmITitle": "Software Engineer & Digital Consultant",
+			"whatIDoTitle": "What I Do",
+			"myStory": {
+				"paragraph1": "I'm a software engineer and digital consultant with extensive experience in web development, blockchain technology, and business optimization.",
+				"paragraph2": "My approach combines technical expertise with strategic thinking to deliver solutions that drive real business value.",
+				"paragraph3": "I believe in continuous learning and staying ahead of technological trends to provide cutting-edge solutions for my clients.",
+				"paragraph4": "Beyond coding, I'm passionate about helping businesses and individuals navigate the digital landscape and achieve their goals."
+			},
+			"philosophyTitle": "My Philosophy",
+			"interestsTitle": "Areas of Interest",
+			"disciplinesTitle": "My Disciplines",
+			"disciplines": [
+				"Full-stack Development",
+				"Blockchain & Web3",
+				"Business Strategy",
+				"Digital Transformation",
+				"Financial Optimization"
+			],
+			"examplesTitle": "Project Examples",
+			"examplesDescription": "Here are some highlights of my work:",
+			"examples": [
+				"Built scalable web applications using Next.js and modern tech stack",
+				"Developed and implemented Web3 solutions for various businesses",
+				"Provided strategic consulting for digital transformation projects",
+				"Created efficient financial optimization strategies"
+			]
+		},
+		"business": {
+			"common": {
+				"cta": {
+					"contact": "Contact Us Today",
+					"getStarted": "Get Started",
+					"schedule": "Schedule a Consultation",
+					"learnMore": "Learn More"
+				}
+			},
+			"consultancy": {
+				"title": "Business Consultancy Services",
+				"subtitle": "Expert guidance to help your business thrive in today's competitive market",
+				"hero": {
+					"title": "Business Consultancy Services",
+					"subtitle": "Expert guidance to help your business thrive in today's competitive market"
+				},
+				"services": [
+					{
+						"title": "Strategic Planning",
+						"description": "Long-term business strategy and growth planning",
+						"icon": "💡"
+					},
+					{
+						"title": "Process Optimization",
+						"description": "Streamline operations and improve efficiency",
+						"icon": "⚡"
+					},
+					{
+						"title": "Market Analysis",
+						"description": "In-depth market research and competitor analysis",
+						"icon": "📊"
+					}
+				],
+				"approach": {
+					"title": "Our Approach",
+					"items": [
+						"Thorough analysis of your business needs",
+						"Custom-tailored solutions and strategies",
+						"Continuous support and implementation guidance",
+						"Regular progress monitoring and adjustments"
+					]
+				},
+				"benefits": {
+					"title": "Benefits",
+					"items": [
+						"Improved operational efficiency",
+						"Enhanced business performance",
+						"Strategic growth planning",
+						"Expert industry insights"
+					]
+				},
+				"cta": {
+					"title": "Ready to Transform Your Business?",
+					"description": "Get in touch to discuss how we can help your business grow",
+					"button": "Schedule a Consultation"
+				}
+			},
+			"development": {
+				"title": "Development Services",
+				"subtitle": "Custom software solutions to drive your business forward",
+				"services": [
+					{
+						"title": "Web Development",
+						"description": "Modern web applications and websites",
+						"icon": "🌐"
+					},
+					{
+						"title": "Mobile Development",
+						"description": "Native and cross-platform mobile apps",
+						"icon": "📱"
+					},
+					{
+						"title": "Custom Software",
+						"description": "Tailored software solutions",
+						"icon": "💻"
+					}
+				],
+				"technologies": {
+					"title": "Technologies We Use",
+					"categories": {
+						"frontend": {
+							"title": "Frontend",
+							"items": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+						},
+						"backend": {
+							"title": "Backend",
+							"items": ["Node.js", "Python", "Go", "PostgreSQL"]
+						},
+						"mobile": {
+							"title": "Mobile",
+							"items": ["React Native", "Flutter", "iOS", "Android"]
+						}
+					}
+				},
+				"process": {
+					"title": "Our Development Process",
+					"subtitle": "A systematic approach to delivering high-quality software",
+					"steps": [
+						{
+							"title": "Planning & Analysis",
+							"description": "Thorough requirements gathering and project planning"
+						},
+						{
+							"title": "Design & Development",
+							"description": "Clean code and modern architecture implementation"
+						},
+						{
+							"title": "Testing & QA",
+							"description": "Comprehensive testing and quality assurance"
+						},
+						{
+							"title": "Deployment & Support",
+							"description": "Smooth deployment and ongoing maintenance"
+						}
+					]
+				}
+			},
+			"cryptoWeb3": {
+				"title": "Crypto & Web3 Solutions",
+				"subtitle": "Embrace the future of digital technology with our blockchain and cryptocurrency expertise",
+				"services": [
+					{
+						"title": "Blockchain Development",
+						"description": "Smart contracts and dApp development",
+						"icon": "🔗"
+					},
+					{
+						"title": "Web3 Integration",
+						"description": "Connect your business with blockchain technology",
+						"icon": "🌐"
+					},
+					{
+						"title": "Crypto Strategy",
+						"description": "Digital asset management and strategy",
+						"icon": "📊"
+					}
+				],
+				"features": {
+					"whyUs": {
+						"title": "Why Choose Us for Web3?",
+						"items": [
+							"Deep understanding of blockchain technology",
+							"Experience with multiple blockchain platforms",
+							"Security-first development approach",
+							"Proven track record in crypto projects"
+						]
+					},
+					"process": {
+						"title": "Our Process",
+						"items": [
+							"Thorough requirements analysis",
+							"Custom blockchain solution design",
+							"Secure implementation and testing",
+							"Ongoing support and maintenance"
+						]
+					}
+				},
+				"cta": {
+					"title": "Ready to Enter the Web3 Space?",
+					"description": "Let's discuss how blockchain technology can transform your business",
+					"button": "Get Started"
+				}
+			},
+			"marketing": {
+				"hero": {
+					"title": "Marketing Services",
+					"subtitle": "Strategic marketing solutions to grow your brand and reach your target audience"
+				},
+				"services": [
+					{
+						"title": "Digital Marketing",
+						"description": "Comprehensive online marketing strategies",
+						"icon": "🌐"
+					},
+					{
+						"title": "Social Media",
+						"description": "Social media management and growth",
+						"icon": "📱"
+					},
+					{
+						"title": "Content Strategy",
+						"description": "Content creation and distribution",
+						"icon": "✍️"
+					}
+				],
+				"approach": {
+					"title": "Our Marketing Approach",
+					"items": [
+						"Data-driven strategy development",
+						"Target audience analysis",
+						"Multi-channel marketing campaigns",
+						"Performance tracking and optimization"
+					]
+				},
+				"benefits": {
+					"title": "Key Benefits",
+					"items": [
+						"Increased brand visibility",
+						"Higher conversion rates",
+						"Better ROI on marketing spend",
+						"Stronger market positioning"
+					]
+				},
+				"process": {
+					"title": "Marketing Process",
+					"subtitle": "Our systematic approach to marketing success",
+					"steps": [
+						{
+							"title": "Research & Analysis",
+							"description": "Market research and competitor analysis"
+						},
+						{
+							"title": "Strategy Development",
+							"description": "Custom marketing plan creation"
+						},
+						{
+							"title": "Implementation",
+							"description": "Campaign execution and management"
+						},
+						{
+							"title": "Optimization",
+							"description": "Performance monitoring and improvements"
+						}
+					]
+				},
+				"cta": {
+					"title": "Ready to Boost Your Marketing?",
+					"description": "Let's create a marketing strategy that drives results",
+					"button": "Get Started"
+				}
+			}
+		},
+		"individuals": {
+			"common": {
+				"cta": {
+					"contact": "Contact Me Today",
+					"getStarted": "Get Started",
+					"schedule": "Schedule a Consultation",
+					"learnMore": "Learn More"
+				}
+			},
+			"personalGrowth": {
+				"hero": {
+					"title": "Personal Growth Services",
+					"subtitle": "Unlock your potential and achieve personal excellence through targeted mentoring"
+				},
+				"services": [
+					{
+						"title": "Skill Development",
+						"description": "Enhance your professional capabilities",
+						"icon": "🎯"
+					},
+					{
+						"title": "Career Growth",
+						"description": "Strategic career planning and advancement",
+						"icon": "📈"
+					},
+					{
+						"title": "Personal Development",
+						"description": "Build confidence and leadership skills",
+						"icon": "🌱"
+					}
+				],
+				"approach": {
+					"title": "Our Approach",
+					"items": [
+						"Personalized growth assessment",
+						"Custom development plans",
+						"Regular progress tracking",
+						"Continuous feedback and support"
+					]
+				},
+				"benefits": {
+					"title": "What You'll Gain",
+					"items": [
+						"Enhanced professional skills",
+						"Improved self-confidence",
+						"Clear career direction",
+						"Better decision-making abilities"
+					]
+				},
+				"process": {
+					"title": "Growth Journey",
+					"subtitle": "Your path to personal and professional excellence",
+					"steps": [
+						{
+							"title": "Assessment",
+							"description": "Understanding your current position and goals"
+						},
+						{
+							"title": "Planning",
+							"description": "Creating your personalized development roadmap"
+						},
+						{
+							"title": "Implementation",
+							"description": "Taking action and developing new skills"
+						},
+						{
+							"title": "Evolution",
+							"description": "Continuous growth and advancement"
+						}
+					]
+				},
+				"cta": {
+					"title": "Ready to Start Your Growth Journey?",
+					"description": "Take the first step towards your personal development",
+					"button": "Start Now"
+				}
+			},
+			"development": {
+				"hero": {
+					"title": "Technical Development Services",
+					"subtitle": "Personalized technical mentoring to help you grow as a developer"
+				},
+				"services": [
+					{
+						"title": "Programming Skills",
+						"description": "Learn modern programming languages and frameworks",
+						"icon": "💻"
+					},
+					{
+						"title": "Technical Mentoring",
+						"description": "One-on-one guidance and support",
+						"icon": "👨‍🏫"
+					},
+					{
+						"title": "Project Guidance",
+						"description": "Help with personal technical projects",
+						"icon": "🚀"
+					}
+				],
+				"technologies": {
+					"title": "What You'll Learn",
+					"categories": [
+						{
+							"title": "Web Development",
+							"items": ["JavaScript/TypeScript", "React", "Node.js", "Next.js"]
+						},
+						{
+							"title": "Mobile Development",
+							"items": ["React Native", "Flutter", "iOS", "Android"]
+						},
+						{
+							"title": "Other Skills",
+							"items": ["Git", "DevOps", "Testing", "Architecture"]
+						}
+					]
+				},
+				"process": {
+					"title": "Learning Journey",
+					"subtitle": "Your path to technical excellence",
+					"steps": [
+						{
+							"title": "Assessment",
+							"description": "Evaluate your current skills and goals"
+						},
+						{
+							"title": "Learning Plan",
+							"description": "Create a personalized learning roadmap"
+						},
+						{
+							"title": "Hands-on Practice",
+							"description": "Work on real projects and exercises"
+						},
+						{
+							"title": "Continuous Growth",
+							"description": "Regular feedback and skill advancement"
+						}
+					]
+				},
+				"cta": {
+					"title": "Ready to Level Up Your Tech Skills?",
+					"description": "Start your journey to becoming a better developer today",
+					"button": "Start Learning"
+				}
+			},
+			"consultancy": {
+				"hero": {
+					"title": "Personal Consultancy Services",
+					"subtitle": "Expert guidance for your personal and professional development"
+				},
+				"services": [
+					{
+						"title": "Career Guidance",
+						"description": "Professional career path planning",
+						"icon": "🎯"
+					},
+					{
+						"title": "Skill Development",
+						"description": "Personal skill enhancement strategies",
+						"icon": "📚"
+					},
+					{
+						"title": "Decision Making",
+						"description": "Strategic decision-making support",
+						"icon": "🤔"
+					}
+				],
+				"approach": {
+					"title": "Our Approach",
+					"items": [
+						"Personalized assessment and planning",
+						"One-on-one mentoring sessions",
+						"Goal-oriented development plans",
+						"Regular progress evaluation"
+					]
+				},
+				"benefits": {
+					"title": "Benefits",
+					"items": [
+						"Clear career direction",
+						"Enhanced decision-making skills",
+						"Improved professional capabilities",
+						"Greater self-confidence"
+					]
+				},
+				"cta": {
+					"title": "Ready to Start Your Journey?",
+					"description": "Let's work together to achieve your goals",
+					"button": "Schedule a Consultation"
+				}
+			}
+		},
+		"legal": {
+			"cookies": {
+				"title": "Cookie Policy",
+				"sections": {
+					"contactForm": {
+						"title": "Contact Form Cookies",
+						"description": "Our website uses Google reCAPTCHA on the contact form, which may set cookies to:",
+						"purposes": [
+							"Prevent spam submissions",
+							"Verify that you are a human user",
+							"Ensure the security of form submissions"
+						]
+					},
+					"thirdParty": {
+						"title": "Third-Party Cookies",
+						"description": "Google reCAPTCHA is provided by Google Inc. The use of reCAPTCHA is subject to the Google Privacy Policy and Terms of Service."
+					},
+					"control": {
+						"title": "Cookie Control",
+						"description": "You can control and/or delete cookies as you wish through your browser settings. However, this may affect the functionality of the contact form."
+					}
+				}
+			},
+			"privacy": {
+				"title": "Privacy Policy",
+				"sections": {
+					"dataCollection": {
+						"title": "Contact Form Data Collection",
+						"description": "When you use our contact form, we collect:",
+						"items": [
+							"Name",
+							"Email address",
+							"Message content",
+							"reCAPTCHA verification data"
+						]
+					},
+					"dataUsage": {
+						"title": "Data Usage",
+						"description": "The information you provide through the contact form is used solely to:",
+						"purposes": [
+							"Respond to your inquiries",
+							"Prevent spam submissions",
+							"Improve our service"
+						]
+					},
+					"dataProtection": {
+						"title": "Data Protection",
+						"description": "Your data is securely processed and stored. We do not share your personal information with third parties except as necessary to operate the contact form (e.g., reCAPTCHA verification)."
+					}
+				}
+			},
+			"terms": {
+				"title": "Terms & Conditions",
+				"sections": {
+					"formUsage": {
+						"title": "Contact Form Usage",
+						"description": "By using our contact form, you agree to:",
+						"conditions": [
+							"Provide accurate and truthful information",
+							"Not use the form for spam or malicious purposes",
+							"Accept our privacy policy and cookie policy",
+							"Comply with reCAPTCHA terms of service"
+						]
+					},
+					"responseTime": {
+						"title": "Response Time",
+						"description": "While we strive to respond to all inquiries promptly, we cannot guarantee specific response times. By submitting the form, you acknowledge that response times may vary."
+					},
+					"content": {
+						"title": "Content Guidelines",
+						"description": "Messages sent through the contact form should not contain inappropriate, offensive, or illegal content. We reserve the right to ignore or report any communications that violate these guidelines."
+					}
+				}
+			}
+		}
+	},
+	"emails": {
+		"contactFeedback": {
+			"subject": "[no reply]: Thanks for contacting us",
+			"message": "We have received your request. We will get in touch as soon as possible."
+		}
+	}
+}

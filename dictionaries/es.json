@@ -1,0 +1,122 @@
+{
+	"layout": {
+		"metadata": {
+			"title": "Raül Vila",
+			"description": "Description"
+		},
+		"header": {
+			"navElements": {
+				"home": "Home",
+				"business": "For Businesses",
+				"individuals": "For Individuals",
+				"about": "About us",
+				"links": "Links"
+			},
+			"cta": "Contact us"
+		}
+	},
+	"pages": {
+		"home": {
+			"title": "Customized Solutions to Establish or Improve Your Online Presence",
+			"subtitle": "We transform your vision into a successful digital presence. From website creation to marketing strategies, we help you stand out online and achieve your business goals.",
+			"links": "Enlaces"
+		},
+		"about": {
+			"contact": {
+				"title": "Connect",
+				"subtitle": "We look forward to hearing from you.",
+				"form": {
+					"labels": {
+						"name": "Your name",
+						"email": "Your email",
+						"subject": "Subject",
+						"message": "Message"
+					},
+					"recaptchaNode": "This site is protected by reCAPTCHA and the Google [Privacy Policy](privacy-policy) and [Terms of Service](terms).",
+					"buttonSubmit": "Contact"
+				}
+			},
+			"developerPortfolio": {
+				"main": {
+					"title": "My Portfolio"
+				},
+				"projects": [
+					{
+						"id": 1,
+						"title": "Project 1",
+						"image": "project1.jpg",
+						"description": "Short description of Project 1",
+						"details": "Detailed information about Project 1"
+					},
+					{
+						"id": 2,
+						"title": "Project 2",
+						"image": "project2.jpg",
+						"description": "Short description of Project 2",
+						"details": "Detailed information about Project 2"
+					}
+				]
+			},
+			"my-story": {
+				"paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tortor fermentum, eleifend lacus nec, semper ligula. Ut ultrices ex id massa feugiat aliquet. Vivamus et erat in lectus finibus iaculis eu non tortor. Fusce ut libero a turpis condimentum bibendum vel ut orci.",
+				"paragraph2": "Nullam efficitur libero non ante vulputate, sit amet hendrerit nunc dapibus. Nullam ut semper justo, ac iaculis nunc. Suspendisse sed sem a massa placerat vehicula. Duis ac pharetra sem. In gravida euismod neque sit amet posuere. Proin sodales elit a lectus semper efficitur.",
+				"paragraph3": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc pulvinar lectus non lectus vulputate aliquam. Maecenas laoreet massa a dui placerat condimentum. Nam lobortis vulputate risus a pellentesque. Suspendisse potenti. Donec gravida cursus odio sit amet suscipit.",
+				"paragraph4": "Fusce at libero eget turpis posuere facilisis. Nulla viverra tellus vel felis pellentesque dignissim. Sed lobortis enim eu sem faucibus, vitae euismod justo consequat. Fusce ut odio non ante ullamcorper iaculis vel eu nibh. Vestibulum tempor massa in purus ullamcorper vestibulum."
+			}
+		},
+		"business": {
+			"consultancy": {
+				"title": "Business Consultancy",
+				"description": "We offer comprehensive business consultancy services to help companies optimize their operations and achieve sustainable growth. Our expertise includes technology consulting, business management, marketing strategies, social media management, and taxation advisory."
+			},
+			"crypto-web3": {
+				"title": "Crypto and Web3 Services",
+				"description": "Our crypto and Web3 services cater to individuals seeking assistance with understanding and navigating the world of cryptocurrency and decentralized technologies. We provide guidance and explanations on various topics related to blockchain, cryptocurrencies, smart contracts, and decentralized applications."
+			},
+			"development": {
+				"title": "Development Services",
+				"description": "Our development services encompass both consultancy and specific project development tailored to businesses' technological needs. Whether you require custom software solutions, web development, or technical consultations, we offer comprehensive services to support your company's growth."
+			},
+			"fiscal-optimisation": {
+				"title": "Fiscal Optimization",
+				"description": "Our fiscal optimization services focus on helping businesses optimize their tax strategies and maximize financial efficiency. We provide expert guidance on tax planning, deductions, incentives, and compliance to ensure your company operates in a tax-efficient manner."
+			},
+			"marketing": {
+				"title": "Marketing Consultancy",
+				"description": "Our marketing consultancy services are designed to assist individuals in enhancing their marketing strategies and achieving their goals. We provide expertise in digital marketing, branding, content creation, social media marketing, and advertising to help individuals grow their online presence and reach their target audience."
+			}
+		},
+		"individuals": {
+			"consultancy": {
+				"title": "Individual Consultancy",
+				"description": "Our individual consultancy services cater to individuals seeking guidance and support in various areas, including technology, business management, marketing, social media, and taxation. We offer personalized advice, answer queries, and provide insights to help individuals enhance their skills and achieve their goals."
+			},
+			"crypto-web3": {
+				"title": "Crypto and Web3 Services",
+				"description": "Our crypto and Web3 services provide individuals with valuable information and explanations on topics related to cryptocurrencies, blockchain, and decentralized technologies. We aim to empower individuals by equipping them with the knowledge and understanding needed to navigate the evolving landscape of digital assets."
+			},
+			"development": {
+				"title": "Development Services",
+				"description": "Our development services cater to individuals seeking consultancy and specific development solutions. Whether you have a project idea or require technical assistance, we offer services in custom software development, web development, and technology consultations to help individuals bring their visions to life."
+			},
+			"fiscal-optimisation": {
+				"title": "Fiscal Optimization",
+				"description": "Our fiscal optimization services focus on assisting individuals in optimizing their tax strategies and financial efficiency. We provide guidance on tax planning, deductions, incentives, and compliance to help individuals maximize their financial resources and ensure tax obligations are met."
+			},
+			"marketing": {
+				"title": "Marketing Consultancy",
+				"description": "Our marketing consultancy services empower individuals by providing guidance and expertise in digital marketing, branding, content creation, social media marketing, and advertising. We help individuals develop effective marketing strategies to enhance their online presence and achieve their personal marketing goals."
+			},
+			"personal-growth": {
+				"title": "Personal Growth",
+				"description": "Our personal growth services focus on empowering individuals to enhance their personal and professional lives. We offer mentorshipApologies for the cutoff in the response. Here's the complete JSON with the additional content for each page:"
+			}
+		}
+	},
+	"emails": {
+		"contactFeedback": {
+			"subject": "[no reply]: Thanks for contacting with us",
+			"message": "We have received your request. We will get in touch as soon as possible"
+		}
+	}
+}
