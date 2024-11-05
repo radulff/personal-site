@@ -1,10 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import ProjectDetails from '@/components/projects/Details';
 import { projectType } from '@/lib/types';
-import { getDictionary } from '@/lib/getDictionary';
-import { Locale } from '../../../../../../i18nConfig';
 import {
 	Card,
 	CardContent,
@@ -27,11 +24,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 
 	useEffect(() => {
 		const fetchProject = async () => {
-			const locales = await getDictionary(lang as Locale);
-			const foundProject = locales.pages.about.developerPortfolio.projects.find(
-				(project: projectType) => project.id.toString() === id
-			);
-			setProject(foundProject!);
+			try {
+				const response = await fetch(`/api/projects/${id}`, {
+					headers: {
+						'x-language': lang
+					}
+				});
+				if (!response.ok) throw new Error('Failed to fetch project');
+				const data = await response.json();
+				setProject(data);
+			} catch (error) {
+				console.error('Error fetching project:', error);
+			}
 		};
 
 		fetchProject();
@@ -59,28 +63,35 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 					</CardHeader>
 					{/* <CardContent className='space-y-6'>
 						<div className='grid gap-4 md:grid-cols-2'>
-							<div>
-								<h3 className='font-semibold mb-2'>Technologies Used</h3>
-								<ul className='list-disc list-inside text-muted-foreground'>
-									{project.technologies?.map((tech, index) => (
-										<li key={index}>{tech}</li>
-									))}
-								</ul>
-							</div>
-							<div>
-								<h3 className='font-semibold mb-2'>Key Features</h3>
-								<ul className='list-disc list-inside text-muted-foreground'>
-									{project.features?.map((feature, index) => (
-										<li key={index}>{feature}</li>
-									))}
-								</ul>
-							</div>
+							{project.technologies && (
+								<div>
+									<h3 className='font-semibold mb-2'>Technologies Used</h3>
+									<ul className='list-disc list-inside text-muted-foreground'>
+										{project.technologies.map((tech, index) => (
+											<li key={index}>{tech}</li>
+										))}
+									</ul>
+								</div>
+							)}
+							{project.features && (
+								<div>
+									<h3 className='font-semibold mb-2'>Key Features</h3>
+									<ul className='list-disc list-inside text-muted-foreground'>
+										{project.features.map((feature, index) => (
+											<li key={index}>{feature}</li>
+										))}
+									</ul>
+								</div>
+							)}
 						</div>
 
 						{project.link && (
 							<div className='flex justify-center pt-4'>
 								<Button asChild>
-									<Link href={project.link} target='_blank' rel='noopener noreferrer'>
+									<Link
+										href={project.link}
+										target='_blank'
+										rel='noopener noreferrer'>
 										View Project
 									</Link>
 								</Button>

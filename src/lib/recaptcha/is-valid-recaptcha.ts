@@ -1,5 +1,3 @@
-import { dev } from '$app/environment'
-
 /**
  * @author Raül Vila <info@raul-vila.com> `2022/12/26` updated at `2023/05/24`
  *
@@ -28,18 +26,21 @@ import { dev } from '$app/environment'
  */
 export const isValidRecaptcha = async (key: string, token: string) => {
 	try {
-		if (dev && key && token) return true
+		if (process.env.NODE_ENV === 'development' && key && token) return true;
 		const response = await (
 			await fetch(
-				'https://www.google.com/recaptcha/api/siteverify?secret=' + key + '&response=' + token
+				'https://www.google.com/recaptcha/api/siteverify?secret=' +
+					key +
+					'&response=' +
+					token
 			)
-		).json()
+		).json();
 		if (response.success && response.score >= 0.5) {
-			return true
+			return true;
 		} else {
-			return false
+			return false;
 		}
 	} catch (error) {
-		return false
+		return false;
 	}
-}
+};

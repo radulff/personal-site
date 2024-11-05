@@ -32,7 +32,6 @@ export default async function About({
 				</div>
 			</section>
 
-			{/* Content Sections */}
 			<section className='container px-4 md:px-6 pb-12 md:pb-24'>
 				<div className='grid gap-6 md:gap-8'>
 					<Card>

@@ -15,10 +15,10 @@ export default async function ProjectDetails({
 					<h1 className='text-3xl font-bold mb-4'>
 						{locales.pages.about.developerPortfolio.main.title}
 					</h1>
-					<p className='text-gray-500 mb-8'>
+					{/* <p className='text-gray-500 mb-8'>
 						{locales.pages.about.developerPortfolio.description}
-					</p>
-					{/* <section className='mb-8'>
+					</p> */}
+					<section className='mb-8'>
 						<h2 className='text-xl font-bold mb-4'>
 							{locales.pages.about.developerPortfolio.projectsTitle}
 						</h2>
@@ -39,7 +39,7 @@ export default async function ProjectDetails({
 								</div>
 							))}
 						</div>
-					</section> */}
+					</section>
 				</div>
 			</div>
 		</main>

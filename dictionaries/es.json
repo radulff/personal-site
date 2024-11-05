@@ -1,122 +1,635 @@
 {
 	"layout": {
-		"metadata": {
-			"title": "Raül Vila",
-			"description": "Description"
-		},
 		"header": {
 			"navElements": {
-				"home": "Home",
-				"business": "For Businesses",
-				"individuals": "For Individuals",
-				"about": "About us",
-				"links": "Links"
+				"home": "Inicio",
+				"business": "Para Empresas",
+				"individuals": "Para Individuos",
+				"about": "Sobre mí",
+				"links": "Enlaces"
 			},
-			"cta": "Contact us"
+			"cta": "Contáctame"
 		}
 	},
 	"pages": {
 		"home": {
-			"title": "Customized Solutions to Establish or Improve Your Online Presence",
-			"subtitle": "We transform your vision into a successful digital presence. From website creation to marketing strategies, we help you stand out online and achieve your business goals.",
-			"links": "Enlaces"
+			"title": "Soluciones Personalizadas para Establecer o Mejorar Tu Presencia en Línea",
+			"subtitle": "Transformamos tu visión en una presencia digital exitosa. Desde la creación de sitios web hasta estrategias de marketing, te ayudamos a destacar en línea y alcanzar tus objetivos comerciales.",
+			"links": "Enlaces",
+			"hero": {
+				"title": "Bienvenido a Mi Espacio Digital",
+				"subtitle": "Ingeniero de Software, Consultor y Emprendedor Digital"
+			},
+			"services": {
+				"title": "Servicios y Experiencia",
+				"subtitle": "Descubre cómo puedo ayudarte a alcanzar tus objetivos a través de diversos servicios y áreas de experiencia",
+				"cards": {
+					"business": {
+						"title": "Servicios para Empresas",
+						"description": "Consultoría, Desarrollo y Crecimiento Estratégico"
+					},
+					"individual": {
+						"title": "Servicios para Individuos",
+						"description": "Crecimiento Personal, Mentoría y Desarrollo"
+					},
+					"portfolio": {
+						"title": "Portafolio de Desarrollador",
+						"description": "Explora mis proyectos más recientes y trabajo técnico"
+					}
+				}
+			},
+			"about": {
+				"title": "Sobre Mí",
+				"description": "Soy un ingeniero de software y consultor apasionado con experiencia en desarrollo web, tecnología blockchain y transformación digital. Ayudo a empresas e individuos a alcanzar sus objetivos a través de tecnología y orientación estratégica."
+			},
+			"cta": {
+				"learnMore": "Saber Más",
+				"contact": "Contáctame",
+				"links": "Mis Enlaces"
+			}
 		},
 		"about": {
 			"contact": {
-				"title": "Connect",
-				"subtitle": "We look forward to hearing from you.",
+				"title": "Conectar",
+				"subtitle": "Esperamos escuchar de ti.",
 				"form": {
 					"labels": {
-						"name": "Your name",
-						"email": "Your email",
-						"subject": "Subject",
-						"message": "Message"
+						"name": "Tu nombre",
+						"email": "Tu correo electrónico",
+						"subject": "Asunto",
+						"message": "Mensaje"
 					},
-					"recaptchaNode": "This site is protected by reCAPTCHA and the Google [Privacy Policy](privacy-policy) and [Terms of Service](terms).",
-					"buttonSubmit": "Contact"
+					"recaptchaNode": "Este sitio está protegido por reCAPTCHA y la [Política de Privacidad](privacy-policy) y los [Términos de Servicio](terms) de Google.",
+					"buttonSubmit": "Contactar"
+				},
+				"contactMe": {
+					"title": "Contáctame",
+					"description1": "Para cualquier consulta o oportunidad de colaboración, no dudes en contactarme por correo electrónico:",
+					"email": "tu-email@ejemplo.com",
+					"description2": "¡Espero con interés escuchar de ti!",
+					"embedDescription": "A continuación, una inserción en línea de cal.com"
 				}
 			},
 			"developerPortfolio": {
 				"main": {
-					"title": "My Portfolio"
+					"title": "Mi Portafolio"
 				},
+				"projectsTitle": "Detalles del Proyecto",
 				"projects": [
 					{
 						"id": 1,
-						"title": "Project 1",
+						"title": "Proyecto 1",
 						"image": "project1.jpg",
-						"description": "Short description of Project 1",
-						"details": "Detailed information about Project 1"
+						"description": "Breve descripción del Proyecto 1",
+						"details": "Información detallada sobre el Proyecto 1",
+						"skills": ["Habilidad 1", "Habilidad 2"]
 					},
 					{
 						"id": 2,
-						"title": "Project 2",
+						"title": "Proyecto 2",
 						"image": "project2.jpg",
-						"description": "Short description of Project 2",
-						"details": "Detailed information about Project 2"
+						"description": "Breve descripción del Proyecto 2",
+						"details": "Información detallada sobre el Proyecto 2",
+						"skills": ["Habilidad 1", "Habilidad 2"]
 					}
-				]
+				],
+				"expertise": "Amplia experiencia en desarrollo web, marketing digital y consultoría empresarial.",
+				"background": "Más de 10 años de experiencia ayudando a las empresas a mejorar su presencia en línea y optimizar su eficiencia operativa.",
+				"approach": "Un enfoque centrado en el cliente, enfocado en brindar soluciones personalizadas que satisfagan necesidades comerciales específicas.",
+				"skillsTitle": "Habilidades",
+				"skills": ["Habilidad 1", "Habilidad 2", "Habilidad 3", "Habilidad 4"]
 			},
-			"my-story": {
-				"paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tortor fermentum, eleifend lacus nec, semper ligula. Ut ultrices ex id massa feugiat aliquet. Vivamus et erat in lectus finibus iaculis eu non tortor. Fusce ut libero a turpis condimentum bibendum vel ut orci.",
-				"paragraph2": "Nullam efficitur libero non ante vulputate, sit amet hendrerit nunc dapibus. Nullam ut semper justo, ac iaculis nunc. Suspendisse sed sem a massa placerat vehicula. Duis ac pharetra sem. In gravida euismod neque sit amet posuere. Proin sodales elit a lectus semper efficitur.",
-				"paragraph3": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc pulvinar lectus non lectus vulputate aliquam. Maecenas laoreet massa a dui placerat condimentum. Nam lobortis vulputate risus a pellentesque. Suspendisse potenti. Donec gravida cursus odio sit amet suscipit.",
-				"paragraph4": "Fusce at libero eget turpis posuere facilisis. Nulla viverra tellus vel felis pellentesque dignissim. Sed lobortis enim eu sem faucibus, vitae euismod justo consequat. Fusce ut odio non ante ullamcorper iaculis vel eu nibh. Vestibulum tempor massa in purus ullamcorper vestibulum."
-			}
+			"title": "Sobre Mí",
+			"whoAmITitle": "Ingeniero de Software y Consultor Digital",
+			"whatIDoTitle": "Lo Que Hago",
+			"myStory": {
+				"paragraph1": "Soy un ingeniero de software y consultor digital con amplia experiencia en desarrollo web, tecnología blockchain y optimización empresarial.",
+				"paragraph2": "Mi enfoque combina experiencia técnica con pensamiento estratégico para brindar soluciones que generen valor real para el negocio.",
+				"paragraph3": "Creo en el aprendizaje continuo y en mantenerme a la vanguardia de las tendencias tecnológicas para ofrecer soluciones innovadoras a mis clientes.",
+				"paragraph4": "Más allá de la programación, me apasiona ayudar a empresas e individuos a navegar el mundo digital y alcanzar sus objetivos."
+			},
+			"philosophyTitle": "Mi Filosofía",
+			"interestsTitle": "Áreas de Interés",
+			"disciplinesTitle": "Mis Disciplinas",
+			"disciplines": [
+				"Desarrollo Full-stack",
+				"Blockchain y Web3",
+				"Estrategia de Negocios",
+				"Transformación Digital",
+				"Optimización Financiera"
+			],
+			"examplesTitle": "Ejemplos de Proyectos",
+			"examplesDescription": "Aquí algunos ejemplos destacados de mi trabajo:",
+			"examples": [
+				"Construcción de aplicaciones web escalables usando Next.js y tecnologías modernas",
+				"Desarrollo e implementación de soluciones Web3 para diferentes empresas",
+				"Consultoría estratégica para proyectos de transformación digital",
+				"Creación de estrategias eficientes de optimización financiera"
+			]
 		},
 		"business": {
-			"consultancy": {
-				"title": "Business Consultancy",
-				"description": "We offer comprehensive business consultancy services to help companies optimize their operations and achieve sustainable growth. Our expertise includes technology consulting, business management, marketing strategies, social media management, and taxation advisory."
+			"common": {
+				"cta": {
+					"contact": "Contáctanos Hoy",
+					"getStarted": "Comienza Ahora",
+					"schedule": "Agendar una Consulta",
+					"learnMore": "Saber Más"
+				}
 			},
-			"crypto-web3": {
-				"title": "Crypto and Web3 Services",
-				"description": "Our crypto and Web3 services cater to individuals seeking assistance with understanding and navigating the world of cryptocurrency and decentralized technologies. We provide guidance and explanations on various topics related to blockchain, cryptocurrencies, smart contracts, and decentralized applications."
+			"consultancy": {
+				"title": "Servicios de Consultoría Empresarial",
+				"subtitle": "Orientación experta para ayudar a tu empresa a prosperar en el mercado competitivo de hoy",
+				"hero": {
+					"title": "Servicios de Consultoría Empresarial",
+					"subtitle": "Orientación experta para ayudar a tu empresa a prosperar en el mercado competitivo de hoy"
+				},
+				"services": [
+					{
+						"title": "Planificación Estratégica",
+						"description": "Estrategia empresarial a largo plazo y planificación de crecimiento",
+						"icon": "💡"
+					},
+					{
+						"title": "Optimización de Procesos",
+						"description": "Optimización de operaciones y mejora de la eficiencia",
+						"icon": "⚡"
+					},
+					{
+						"title": "Análisis de Mercado",
+						"description": "Investigación de mercado y análisis de competidores",
+						"icon": "📊"
+					}
+				],
+				"approach": {
+					"title": "Nuestro Enfoque",
+					"items": [
+						"Análisis exhaustivo de las necesidades de tu empresa",
+						"Soluciones y estrategias personalizadas",
+						"Apoyo continuo y guía de implementación",
+						"Monitoreo de progreso regular y ajustes"
+					]
+				},
+				"benefits": {
+					"title": "Beneficios",
+					"items": [
+						"Mejora de la eficiencia operativa",
+						"Rendimiento empresarial mejorado",
+						"Planificación estratégica de crecimiento",
+						"Información experta sobre la industria"
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Transformar Tu Negocio?",
+					"description": "Ponte en contacto para discutir cómo podemos ayudar a tu empresa a crecer",
+					"button": "Agendar una Consulta"
+				}
 			},
 			"development": {
-				"title": "Development Services",
-				"description": "Our development services encompass both consultancy and specific project development tailored to businesses' technological needs. Whether you require custom software solutions, web development, or technical consultations, we offer comprehensive services to support your company's growth."
+				"title": "Servicios de Desarrollo",
+				"subtitle": "Soluciones de software personalizadas para impulsar tu negocio",
+				"services": [
+					{
+						"title": "Desarrollo Web",
+						"description": "Aplicaciones web modernas y sitios web",
+						"icon": "🌐"
+					},
+					{
+						"title": "Desarrollo Móvil",
+						"description": "Aplicaciones móviles nativas y multiplataforma",
+						"icon": "📱"
+					},
+					{
+						"title": "Software a Medida",
+						"description": "Soluciones de software personalizadas",
+						"icon": "💻"
+					}
+				],
+				"technologies": {
+					"title": "Tecnologías que Usamos",
+					"categories": {
+						"frontend": {
+							"title": "Frontend",
+							"items": ["React", "Next.js", "TypeScript", "Tailwind CSS"]
+						},
+						"backend": {
+							"title": "Backend",
+							"items": ["Node.js", "Python", "Go", "PostgreSQL"]
+						},
+						"mobile": {
+							"title": "Móvil",
+							"items": ["React Native", "Flutter", "iOS", "Android"]
+						}
+					}
+				},
+				"process": {
+					"title": "Nuestro Proceso de Desarrollo",
+					"subtitle": "Un enfoque sistemático para ofrecer software de alta calidad",
+					"steps": [
+						{
+							"title": "Planificación y Análisis",
+							"description": "Recolección de requisitos y planificación del proyecto"
+						},
+						{
+							"title": "Diseño y Desarrollo",
+							"description": "Implementación de código limpio y arquitectura moderna"
+						},
+						{
+							"title": "Pruebas y Control de Calidad",
+							"description": "Pruebas exhaustivas y aseguramiento de calidad"
+						},
+						{
+							"title": "Despliegue y Soporte",
+							"description": "Despliegue sin problemas y mantenimiento continuo"
+						}
+					]
+				}
 			},
-			"fiscal-optimisation": {
-				"title": "Fiscal Optimization",
-				"description": "Our fiscal optimization services focus on helping businesses optimize their tax strategies and maximize financial efficiency. We provide expert guidance on tax planning, deductions, incentives, and compliance to ensure your company operates in a tax-efficient manner."
+			"cryptoWeb3": {
+				"title": "Soluciones de Cripto y Web3",
+				"subtitle": "Adopta el futuro de la tecnología digital con nuestra experiencia en blockchain y criptomonedas",
+				"services": [
+					{
+						"title": "Desarrollo Blockchain",
+						"description": "Contratos inteligentes y desarrollo de dApp",
+						"icon": "🔗"
+					},
+					{
+						"title": "Integración Web3",
+						"description": "Conecta tu empresa con tecnología blockchain",
+						"icon": "🌐"
+					},
+					{
+						"title": "Estrategia de Cripto",
+						"description": "Gestión de activos digitales y estrategia",
+						"icon": "📊"
+					}
+				],
+				"features": {
+					"whyUs": {
+						"title": "¿Por Qué Escogernos para Web3?",
+						"items": [
+							"Profundo conocimiento de la tecnología blockchain",
+							"Experiencia con múltiples plataformas de blockchain",
+							"Enfoque en seguridad en el desarrollo",
+							"Historial comprobado en proyectos de cripto"
+						]
+					},
+					"process": {
+						"title": "Nuestro Proceso",
+						"items": [
+							"Análisis exhaustivo de requisitos",
+							"Diseño de soluciones blockchain personalizadas",
+							"Implementación y pruebas seguras",
+							"Soporte y mantenimiento continuo"
+						]
+					}
+				},
+				"cta": {
+					"title": "¿Listo para Entrar en el Espacio Web3?",
+					"description": "Hablemos sobre cómo la tecnología blockchain puede transformar tu negocio",
+					"button": "Comienza Ahora"
+				}
 			},
 			"marketing": {
-				"title": "Marketing Consultancy",
-				"description": "Our marketing consultancy services are designed to assist individuals in enhancing their marketing strategies and achieving their goals. We provide expertise in digital marketing, branding, content creation, social media marketing, and advertising to help individuals grow their online presence and reach their target audience."
+				"hero": {
+					"title": "Servicios de Marketing",
+					"subtitle": "Soluciones de marketing estratégicas para hacer crecer tu marca y alcanzar tu audiencia objetivo"
+				},
+				"services": [
+					{
+						"title": "Marketing Digital",
+						"description": "Estrategias integrales de marketing en línea",
+						"icon": "🌐"
+					},
+					{
+						"title": "Redes Sociales",
+						"description": "Gestión y crecimiento en redes sociales",
+						"icon": "📱"
+					},
+					{
+						"title": "Estrategia de Contenidos",
+						"description": "Creación y distribución de contenidos",
+						"icon": "✍️"
+					}
+				],
+				"approach": {
+					"title": "Nuestro Enfoque de Marketing",
+					"items": [
+						"Desarrollo de estrategias basadas en datos",
+						"Análisis de la audiencia objetivo",
+						"Campañas de marketing multicanal",
+						"Seguimiento de rendimiento y optimización"
+					]
+				},
+				"benefits": {
+					"title": "Beneficios Clave",
+					"items": [
+						"Aumento de visibilidad de marca",
+						"Mayores tasas de conversión",
+						"Mejor retorno de inversión en marketing",
+						"Posicionamiento sólido en el mercado"
+					]
+				},
+				"process": {
+					"title": "Proceso de Marketing",
+					"subtitle": "Nuestro enfoque sistemático hacia el éxito en marketing",
+					"steps": [
+						{
+							"title": "Investigación y Análisis",
+							"description": "Investigación de mercado y análisis de competidores"
+						},
+						{
+							"title": "Desarrollo de Estrategia",
+							"description": "Creación de un plan de marketing personalizado"
+						},
+						{
+							"title": "Implementación",
+							"description": "Ejecución y gestión de campañas"
+						},
+						{
+							"title": "Optimización",
+							"description": "Monitoreo y mejora del rendimiento"
+						}
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Potenciar Tu Marketing?",
+					"description": "Creemos una estrategia de marketing que genere resultados",
+					"button": "Comienza Ahora"
+				}
 			}
 		},
 		"individuals": {
-			"consultancy": {
-				"title": "Individual Consultancy",
-				"description": "Our individual consultancy services cater to individuals seeking guidance and support in various areas, including technology, business management, marketing, social media, and taxation. We offer personalized advice, answer queries, and provide insights to help individuals enhance their skills and achieve their goals."
+			"common": {
+				"cta": {
+					"contact": "Contáctame Hoy",
+					"getStarted": "Comienza Ahora",
+					"schedule": "Agendar una Consulta",
+					"learnMore": "Saber Más"
+				}
 			},
-			"crypto-web3": {
-				"title": "Crypto and Web3 Services",
-				"description": "Our crypto and Web3 services provide individuals with valuable information and explanations on topics related to cryptocurrencies, blockchain, and decentralized technologies. We aim to empower individuals by equipping them with the knowledge and understanding needed to navigate the evolving landscape of digital assets."
+			"personalGrowth": {
+				"hero": {
+					"title": "Servicios de Crecimiento Personal",
+					"subtitle": "Desbloquea tu potencial y alcanza la excelencia personal mediante mentorías dirigidas"
+				},
+				"services": [
+					{
+						"title": "Desarrollo de Habilidades",
+						"description": "Mejora tus capacidades profesionales",
+						"icon": "🎯"
+					},
+					{
+						"title": "Crecimiento Profesional",
+						"description": "Planificación y avance estratégico de carrera",
+						"icon": "📈"
+					},
+					{
+						"title": "Desarrollo Personal",
+						"description": "Desarrolla confianza y habilidades de liderazgo",
+						"icon": "🌱"
+					}
+				],
+				"approach": {
+					"title": "Nuestro Enfoque",
+					"items": [
+						"Evaluación personalizada de crecimiento",
+						"Planes de desarrollo personalizados",
+						"Seguimiento regular de progreso",
+						"Retroalimentación y apoyo continuo"
+					]
+				},
+				"benefits": {
+					"title": "Lo Que Ganarás",
+					"items": [
+						"Mejoras en habilidades profesionales",
+						"Aumento de autoconfianza",
+						"Dirección clara de carrera",
+						"Mejor toma de decisiones"
+					]
+				},
+				"process": {
+					"title": "Viaje de Crecimiento",
+					"subtitle": "Tu camino hacia la excelencia personal y profesional",
+					"steps": [
+						{
+							"title": "Evaluación",
+							"description": "Comprender tu posición actual y objetivos"
+						},
+						{
+							"title": "Planificación",
+							"description": "Crear tu hoja de ruta de desarrollo personalizada"
+						},
+						{
+							"title": "Implementación",
+							"description": "Tomar acción y desarrollar nuevas habilidades"
+						},
+						{
+							"title": "Evolución",
+							"description": "Crecimiento y avance continuo"
+						}
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Empezar Tu Viaje de Crecimiento?",
+					"description": "Da el primer paso hacia tu desarrollo personal",
+					"button": "Empezar Ahora"
+				}
 			},
 			"development": {
-				"title": "Development Services",
-				"description": "Our development services cater to individuals seeking consultancy and specific development solutions. Whether you have a project idea or require technical assistance, we offer services in custom software development, web development, and technology consultations to help individuals bring their visions to life."
+				"hero": {
+					"title": "Servicios de Desarrollo Técnico",
+					"subtitle": "Mentoría técnica personalizada para ayudarte a crecer como desarrollador"
+				},
+				"services": [
+					{
+						"title": "Habilidades de Programación",
+						"description": "Aprende lenguajes de programación y marcos modernos",
+						"icon": "💻"
+					},
+					{
+						"title": "Mentoría Técnica",
+						"description": "Orientación y apoyo uno a uno",
+						"icon": "👨‍🏫"
+					},
+					{
+						"title": "Orientación en Proyectos",
+						"description": "Ayuda con proyectos técnicos personales",
+						"icon": "🚀"
+					}
+				],
+				"technologies": {
+					"title": "Lo Que Aprenderás",
+					"categories": [
+						{
+							"title": "Desarrollo Web",
+							"items": ["JavaScript/TypeScript", "React", "Node.js", "Next.js"]
+						},
+						{
+							"title": "Desarrollo Móvil",
+							"items": ["React Native", "Flutter", "iOS", "Android"]
+						},
+						{
+							"title": "Otras Habilidades",
+							"items": ["Git", "DevOps", "Pruebas", "Arquitectura"]
+						}
+					]
+				},
+				"process": {
+					"title": "Trayectoria de Aprendizaje",
+					"subtitle": "Tu camino hacia la excelencia técnica",
+					"steps": [
+						{
+							"title": "Evaluación",
+							"description": "Evaluar tus habilidades y objetivos actuales"
+						},
+						{
+							"title": "Plan de Aprendizaje",
+							"description": "Crear una hoja de ruta de aprendizaje personalizada"
+						},
+						{
+							"title": "Práctica Práctica",
+							"description": "Trabajar en proyectos y ejercicios reales"
+						},
+						{
+							"title": "Crecimiento Continuo",
+							"description": "Retroalimentación regular y avance de habilidades"
+						}
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Mejorar Tus Habilidades Técnicas?",
+					"description": "Empieza hoy tu camino para ser un mejor desarrollador",
+					"button": "Comienza a Aprender"
+				}
 			},
-			"fiscal-optimisation": {
-				"title": "Fiscal Optimization",
-				"description": "Our fiscal optimization services focus on assisting individuals in optimizing their tax strategies and financial efficiency. We provide guidance on tax planning, deductions, incentives, and compliance to help individuals maximize their financial resources and ensure tax obligations are met."
+			"consultancy": {
+				"hero": {
+					"title": "Servicios de Consultoría Personal",
+					"subtitle": "Orientación experta para tu desarrollo personal y profesional"
+				},
+				"services": [
+					{
+						"title": "Orientación Profesional",
+						"description": "Planificación profesional de la carrera",
+						"icon": "🎯"
+					},
+					{
+						"title": "Desarrollo de Habilidades",
+						"description": "Estrategias de mejora personal de habilidades",
+						"icon": "📚"
+					},
+					{
+						"title": "Toma de Decisiones",
+						"description": "Apoyo en la toma de decisiones estratégicas",
+						"icon": "🤔"
+					}
+				],
+				"approach": {
+					"title": "Nuestro Enfoque",
+					"items": [
+						"Evaluación y planificación personalizada",
+						"Sesiones de mentoría uno a uno",
+						"Planes de desarrollo orientados a metas",
+						"Evaluación de progreso regular"
+					]
+				},
+				"benefits": {
+					"title": "Beneficios",
+					"items": [
+						"Dirección clara de carrera",
+						"Mejora de habilidades en toma de decisiones",
+						"Mejoras en capacidades profesionales",
+						"Mayor autoconfianza"
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Empezar Tu Viaje?",
+					"description": "Trabajemos juntos para alcanzar tus objetivos",
+					"button": "Agendar una Consulta"
+				}
+			}
+		},
+		"legal": {
+			"cookies": {
+				"title": "Política de Cookies",
+				"sections": {
+					"contactForm": {
+						"title": "Cookies del Formulario de Contacto",
+						"description": "Nuestro sitio web utiliza Google reCAPTCHA en el formulario de contacto, el cual puede establecer cookies para:",
+						"purposes": [
+							"Prevenir envíos de spam",
+							"Verificar que eres un usuario humano",
+							"Asegurar la seguridad de los envíos de formularios"
+						]
+					},
+					"thirdParty": {
+						"title": "Cookies de Terceros",
+						"description": "Google reCAPTCHA es proporcionado por Google Inc. El uso de reCAPTCHA está sujeto a la Política de Privacidad y Términos de Servicio de Google."
+					},
+					"control": {
+						"title": "Control de Cookies",
+						"description": "Puedes controlar y/o eliminar cookies como desees a través de la configuración de tu navegador. Sin embargo, esto puede afectar la funcionalidad del formulario de contacto."
+					}
+				}
 			},
-			"marketing": {
-				"title": "Marketing Consultancy",
-				"description": "Our marketing consultancy services empower individuals by providing guidance and expertise in digital marketing, branding, content creation, social media marketing, and advertising. We help individuals develop effective marketing strategies to enhance their online presence and achieve their personal marketing goals."
+			"privacy": {
+				"title": "Política de Privacidad",
+				"sections": {
+					"dataCollection": {
+						"title": "Recolección de Datos del Formulario de Contacto",
+						"description": "Cuando usas nuestro formulario de contacto, recopilamos:",
+						"items": [
+							"Nombre",
+							"Dirección de correo electrónico",
+							"Contenido del mensaje",
+							"Datos de verificación de reCAPTCHA"
+						]
+					},
+					"dataUsage": {
+						"title": "Uso de los Datos",
+						"description": "La información que proporcionas a través del formulario de contacto se utiliza únicamente para:",
+						"purposes": [
+							"Responder a tus consultas",
+							"Prevenir envíos de spam",
+							"Mejorar nuestro servicio"
+						]
+					},
+					"dataProtection": {
+						"title": "Protección de Datos",
+						"description": "Tus datos son procesados y almacenados de manera segura. No compartimos tu información personal con terceros, excepto cuando es necesario para operar el formulario de contacto (por ejemplo, verificación de reCAPTCHA)."
+					}
+				}
 			},
-			"personal-growth": {
-				"title": "Personal Growth",
-				"description": "Our personal growth services focus on empowering individuals to enhance their personal and professional lives. We offer mentorshipApologies for the cutoff in the response. Here's the complete JSON with the additional content for each page:"
+			"terms": {
+				"title": "Términos y Condiciones",
+				"sections": {
+					"formUsage": {
+						"title": "Uso del Formulario de Contacto",
+						"description": "Al usar nuestro formulario de contacto, aceptas:",
+						"conditions": [
+							"Proporcionar información precisa y veraz",
+							"No usar el formulario para spam o fines maliciosos",
+							"Aceptar nuestra política de privacidad y política de cookies",
+							"Cumplir con los términos de servicio de reCAPTCHA"
+						]
+					},
+					"responseTime": {
+						"title": "Tiempo de Respuesta",
+						"description": "Si bien nos esforzamos por responder a todas las consultas con prontitud, no podemos garantizar tiempos de respuesta específicos. Al enviar el formulario, reconoces que los tiempos de respuesta pueden variar."
+					},
+					"content": {
+						"title": "Directrices de Contenido",
+						"description": "Los mensajes enviados a través del formulario de contacto no deben contener contenido inapropiado, ofensivo o ilegal. Nos reservamos el derecho de ignorar o reportar cualquier comunicación que viole estas pautas."
+					}
+				}
 			}
 		}
 	},
 	"emails": {
 		"contactFeedback": {
-			"subject": "[no reply]: Thanks for contacting with us",
-			"message": "We have received your request. We will get in touch as soon as possible"
+			"subject": "[no responder]: Gracias por contactarnos",
+			"message": "Hemos recibido tu solicitud. Nos pondremos en contacto lo antes posible."
 		}
 	}
 }

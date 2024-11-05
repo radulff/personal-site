@@ -80,7 +80,7 @@ export async function POST(req: NextRequest) {
 	}
 
 	const localesContactFeedback: { subject: string; message: string } = (
-		await import(`../../../../locales/${lang ?? DEFAULT_LANGUAGE}.json`)
+		await import(`../../../../dictionaries/${lang ?? DEFAULT_LANGUAGE}.json`)
 	).default.emails.contactFeedback;
 
 	const response2 = await transporter.sendMail({

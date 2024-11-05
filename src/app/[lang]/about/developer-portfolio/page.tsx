@@ -6,8 +6,8 @@ import {
 	CardContent,
 	CardDescription,
 	CardHeader,
-	CardTitle,
-} from "@/components/ui/card";
+	CardTitle
+} from '@/components/ui/card';
 
 export default async function DeveloperPortfolio({
 	params: { lang }
@@ -34,7 +34,9 @@ export default async function DeveloperPortfolio({
 
 			{/* Projects Grid */}
 			<section className='container px-4 md:px-6 py-12'>
-				<ProjectsGrid locales={locales.pages.about.developerPortfolio.projects} />
+				<ProjectsGrid
+					locales={locales.pages.about.developerPortfolio.projects}
+				/>
 			</section>
 
 			{/* Skills Section */}

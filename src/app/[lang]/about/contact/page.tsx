@@ -20,7 +20,7 @@ export default async function Contact({
 
 	return (
 		<div className='min-h-screen'>
-			<Recaptcha />
+			{/* <Recaptcha /> */}
 
 			{/* Hero Section */}
 			<section className='max-w-screen-2xl mx-auto px-4 md:px-16 py-12 md:py-24'>
@@ -33,15 +33,15 @@ export default async function Contact({
 							{locales.pages.about.contact.subtitle}
 						</p>
 					</div>
-					<ContactForm
+					{/* <ContactForm
 						extraclass='w-full'
 						locales={locales.pages.about.contact.form}
-					/>
+					/> */}
 				</div>
 			</section>
 
 			{/* Contact Info Section */}
-			<section className='bg-muted py-12 md:py-24'>
+			{/* <section className='bg-muted py-12 md:py-24'>
 				<div className='container mx-auto px-4'>
 					<div className='grid lg:grid-cols-2 gap-12'>
 						<Card>
@@ -80,7 +80,7 @@ export default async function Contact({
 						</Card>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</div>
 	);
 }
