@@ -15,36 +15,38 @@ export default async function Business({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.business.main;
+	const commonCta = dictionary.pages.business.common.cta;
 
 	const businessServices = [
 		{
-			title: 'Consultancy',
-			description: 'Strategic business advice and guidance',
+			...t.services.categories.consultancy,
 			href: '/business/consultancy',
 			icon: '💡'
 		},
 		{
-			title: 'Development',
-			description: 'Custom software and digital solutions',
+			...t.services.categories.development,
 			href: '/business/development',
 			icon: '💻'
 		},
 		{
-			title: 'Crypto & Web3',
-			description: 'Blockchain and cryptocurrency solutions',
+			...t.services.categories.cryptoWeb3,
 			href: '/business/crypto-web3',
 			icon: '🔗'
 		},
 		{
-			title: 'Marketing',
-			description: 'Digital marketing and growth strategies',
+			...t.services.categories.marketing,
 			href: '/business/marketing',
 			icon: '📈'
 		},
 		{
-			title: 'Fiscal Optimisation',
-			description: 'Tax efficiency and financial planning',
+			title:
+				t.services.categories.fiscalOptimization?.title ||
+				'Fiscal Optimization',
+			description:
+				t.services.categories.fiscalOptimization?.description ||
+				'Tax efficiency and financial planning',
 			href: '/business/fiscal-optimisation',
 			icon: '📊'
 		}
@@ -57,14 +59,13 @@ export default async function Business({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl'>
-							Business Solutions
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Comprehensive business services to help your company grow and
-							succeed in the digital age
+							{t.hero.subtitle}
 						</p>
 						<Button variant='default' size='lg' asChild>
-							<Link href='/about/contact'>Get Started</Link>
+							<Link href='/about/contact'>{commonCta.getStarted}</Link>
 						</Button>
 					</div>
 				</div>
@@ -92,7 +93,7 @@ export default async function Business({
 									className='w-full group-hover:translate-x-1 transition-transform'
 									asChild>
 									<Link href={service.href}>
-										Learn More <span className='ml-2'>→</span>
+										{commonCta.learnMore} <span className='ml-2'>→</span>
 									</Link>
 								</Button>
 							</CardContent>
@@ -107,47 +108,23 @@ export default async function Business({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<div className='space-y-4'>
 							<h2 className='text-3xl font-bold tracking-tighter'>
-								Why Choose Our Business Services?
+								{t.approach.title}
 							</h2>
-							<p className='text-muted-foreground'>
-								We combine expertise, innovation, and a proven track record to
-								deliver exceptional results for your business.
-							</p>
+							<p className='text-muted-foreground'>{t.approach.description}</p>
 						</div>
 						<div className='grid gap-4'>
-							<Card>
-								<CardHeader>
-									<CardTitle>Expertise & Experience</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className='text-muted-foreground'>
-										Years of experience working with businesses across various
-										industries and scales.
-									</p>
-								</CardContent>
-							</Card>
-							<Card>
-								<CardHeader>
-									<CardTitle>Tailored Solutions</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className='text-muted-foreground'>
-										Custom strategies and solutions designed specifically for
-										your business needs.
-									</p>
-								</CardContent>
-							</Card>
-							<Card>
-								<CardHeader>
-									<CardTitle>Innovation Focus</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className='text-muted-foreground'>
-										Staying ahead with the latest technologies and business
-										practices.
-									</p>
-								</CardContent>
-							</Card>
+							{t.benefits.items.map((benefit: string, index: number) => (
+								<Card key={index}>
+									<CardHeader>
+										<CardTitle>{benefit}</CardTitle>
+									</CardHeader>
+									<CardContent>
+										<p className='text-muted-foreground'>
+											{t.approach.steps[index]}
+										</p>
+									</CardContent>
+								</Card>
+							))}
 						</div>
 					</div>
 				</div>
@@ -159,12 +136,12 @@ export default async function Business({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Transform Your Business?
+								{commonCta.contact}
 							</CardTitle>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Contact Us Today</Link>
+								<Link href='/about/contact'>{commonCta.schedule}</Link>
 							</Button>
 						</CardContent>
 					</Card>

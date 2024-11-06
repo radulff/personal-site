@@ -15,25 +15,9 @@ export default async function CryptoWeb3({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
-
-	const cryptoServices = [
-		{
-			title: 'Blockchain Education',
-			description: 'Learn blockchain fundamentals and applications',
-			icon: '📚'
-		},
-		{
-			title: 'Crypto Investment',
-			description: 'Personal cryptocurrency investment guidance',
-			icon: '💰'
-		},
-		{
-			title: 'Web3 Navigation',
-			description: 'Learn to navigate the Web3 ecosystem',
-			icon: '🧭'
-		}
-	];
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.individuals.cryptoWeb3;
+	const commonCta = dictionary.pages.individuals.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -42,11 +26,10 @@ export default async function CryptoWeb3({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							Personal Crypto & Web3 Guidance
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Navigate the future of digital assets and blockchain technology
-							with confidence
+							{t.hero.subtitle}
 						</p>
 					</div>
 				</div>
@@ -55,7 +38,7 @@ export default async function CryptoWeb3({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{cryptoServices.map(service => (
+					{t.services.map((service: any) => (
 						<Card
 							key={service.title}
 							className='hover:shadow-lg transition-all'>
@@ -79,28 +62,26 @@ export default async function CryptoWeb3({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<Card>
 							<CardHeader>
-								<CardTitle>Learning Path</CardTitle>
+								<CardTitle>{t.learning.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Understanding blockchain basics</li>
-									<li>• Cryptocurrency fundamentals</li>
-									<li>• DeFi and Web3 applications</li>
-									<li>• Security best practices</li>
+									{t.learning.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
 
 						<Card>
 							<CardHeader>
-								<CardTitle>{"What You'll Gain"}</CardTitle>
+								<CardTitle>{t.benefits.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Crypto market understanding</li>
-									<li>• Web3 navigation skills</li>
-									<li>• Investment strategies</li>
-									<li>• Risk management knowledge</li>
+									{t.benefits.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
@@ -114,15 +95,15 @@ export default async function CryptoWeb3({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Enter the Web3 World?
+								{t.cta.title}
 							</CardTitle>
 							<CardDescription className='text-center text-primary-foreground/80'>
-								Start your journey into blockchain and cryptocurrency today
+								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Get Started</Link>
+								<Link href='/about/contact'>{commonCta.getStarted}</Link>
 							</Button>
 						</CardContent>
 					</Card>

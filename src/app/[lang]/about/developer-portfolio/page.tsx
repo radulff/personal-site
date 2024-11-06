@@ -15,6 +15,7 @@ export default async function DeveloperPortfolio({
 	params: { lang: Locale };
 }) {
 	const locales = await getDictionary(lang);
+	const portfolioText = locales.pages.about.developerPortfolio;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -23,10 +24,10 @@ export default async function DeveloperPortfolio({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							{locales.pages.about.developerPortfolio.main.title}
+							{portfolioText.main.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Showcasing my technical projects and development work
+							{portfolioText.expertise}
 						</p>
 					</div>
 				</div>
@@ -34,24 +35,20 @@ export default async function DeveloperPortfolio({
 
 			{/* Projects Grid */}
 			<section className='container px-4 md:px-6 py-12'>
-				<ProjectsGrid
-					locales={locales.pages.about.developerPortfolio.projects}
-				/>
+				<ProjectsGrid locales={portfolioText.projects} />
 			</section>
 
 			{/* Skills Section */}
-			{/* <section className='bg-muted py-12 md:py-24'>
+			<section className='bg-muted py-12 md:py-24'>
 				<div className='container px-4 md:px-6'>
 					<Card>
 						<CardHeader>
-							<CardTitle>{locales.pages.about.developerPortfolio.skillsTitle}</CardTitle>
-							<CardDescription>
-								{locales.pages.about.developerPortfolio.expertise}
-							</CardDescription>
+							<CardTitle>{portfolioText.skillsTitle}</CardTitle>
+							<CardDescription>{portfolioText.background}</CardDescription>
 						</CardHeader>
 						<CardContent>
 							<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
-								{locales.pages.about.developerPortfolio.skills.map((skill, index) => (
+								{portfolioText.skills.map((skill, index) => (
 									<div key={index} className='space-y-2'>
 										<p className='text-muted-foreground'>{skill}</p>
 									</div>
@@ -60,7 +57,7 @@ export default async function DeveloperPortfolio({
 						</CardContent>
 					</Card>
 				</div>
-			</section> */}
+			</section>
 		</main>
 	);
 }

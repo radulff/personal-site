@@ -15,25 +15,9 @@ export default async function FiscalOptimisation({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
-
-	const fiscalServices = [
-		{
-			title: 'Personal Tax Planning',
-			description: 'Optimize your personal tax situation',
-			icon: '📊'
-		},
-		{
-			title: 'Investment Strategy',
-			description: 'Smart investment planning and advice',
-			icon: '💰'
-		},
-		{
-			title: 'Financial Planning',
-			description: 'Long-term financial goal planning',
-			icon: '🎯'
-		}
-	];
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.individuals.fiscalOptimization;
+	const commonCta = dictionary.pages.individuals.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -42,10 +26,10 @@ export default async function FiscalOptimisation({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							Personal Fiscal Optimisation
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Strategic financial planning and tax optimization for individuals
+							{t.hero.subtitle}
 						</p>
 					</div>
 				</div>
@@ -54,7 +38,7 @@ export default async function FiscalOptimisation({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{fiscalServices.map(service => (
+					{t.services.map(service => (
 						<Card
 							key={service.title}
 							className='hover:shadow-lg transition-all'>
@@ -78,28 +62,26 @@ export default async function FiscalOptimisation({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<Card>
 							<CardHeader>
-								<CardTitle>Key Benefits</CardTitle>
+								<CardTitle>{t.benefits.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Optimized personal tax structure</li>
-									<li>• Better financial planning</li>
-									<li>• Increased savings</li>
-									<li>• Secure financial future</li>
+									{t.benefits.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
 
 						<Card>
 							<CardHeader>
-								<CardTitle>Our Approach</CardTitle>
+								<CardTitle>{t.approach.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Personal financial assessment</li>
-									<li>• Custom optimization strategy</li>
-									<li>• Regular review and adjustments</li>
-									<li>• Long-term planning focus</li>
+									{t.approach.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
@@ -111,36 +93,16 @@ export default async function FiscalOptimisation({
 			<section className='container px-4 md:px-6 py-12 md:py-24'>
 				<Card>
 					<CardHeader>
-						<CardTitle className='text-2xl'>Our Process</CardTitle>
-						<CardDescription>
-							A systematic approach to personal financial optimization
-						</CardDescription>
+						<CardTitle className='text-2xl'>{t.process.title}</CardTitle>
+						<CardDescription>{t.process.subtitle}</CardDescription>
 					</CardHeader>
 					<CardContent className='grid gap-4 md:grid-cols-2'>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Initial Assessment</h3>
-							<p className='text-muted-foreground'>
-								Comprehensive review of your financial situation
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Strategy Development</h3>
-							<p className='text-muted-foreground'>
-								Creating your personalized financial plan
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Implementation</h3>
-							<p className='text-muted-foreground'>
-								Executing the optimized financial strategy
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Monitoring</h3>
-							<p className='text-muted-foreground'>
-								Regular review and strategy adjustment
-							</p>
-						</div>
+						{t.process.steps.map(step => (
+							<div key={step.title} className='space-y-2'>
+								<h3 className='font-semibold'>{step.title}</h3>
+								<p className='text-muted-foreground'>{step.description}</p>
+							</div>
+						))}
 					</CardContent>
 				</Card>
 			</section>
@@ -151,15 +113,15 @@ export default async function FiscalOptimisation({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Optimize Your Finances?
+								{t.cta.title}
 							</CardTitle>
 							<CardDescription className='text-center text-primary-foreground/80'>
-								{"Let's create a plan for your financial success"}
+								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Get Started</Link>
+								<Link href='/about/contact'>{commonCta.getStarted}</Link>
 							</Button>
 						</CardContent>
 					</Card>

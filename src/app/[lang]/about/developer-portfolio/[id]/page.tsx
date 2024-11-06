@@ -20,38 +20,52 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 	params
 }: ProjectPageProps) => {
 	const [project, setProject] = useState<projectType | null>(null);
+	const [dictionary, setDictionary] = useState<any>(null);
 	const { lang, id } = params;
 
 	useEffect(() => {
-		const fetchProject = async () => {
+		const fetchData = async () => {
 			try {
-				const response = await fetch(`/api/projects/${id}`, {
+				// Fetch project data
+				const projectResponse = await fetch(`/api/projects/${id}`, {
 					headers: {
 						'x-language': lang
 					}
 				});
-				if (!response.ok) throw new Error('Failed to fetch project');
-				const data = await response.json();
-				setProject(data);
+				if (!projectResponse.ok) throw new Error('Failed to fetch project');
+				const projectData = await projectResponse.json();
+				setProject(projectData);
+
+				// Fetch dictionary
+				const dictionaryResponse = await fetch(`/api/dictionary?lang=${lang}`);
+				if (!dictionaryResponse.ok)
+					throw new Error('Failed to fetch dictionary');
+				const dictionaryData = await dictionaryResponse.json();
+				setDictionary(dictionaryData);
 			} catch (error) {
-				console.error('Error fetching project:', error);
+				console.error('Error fetching data:', error);
 			}
 		};
 
-		fetchProject();
+		fetchData();
 	}, [lang, id]);
 
-	if (!project) {
+	if (!project || !dictionary) {
 		return (
 			<div className='container mx-auto px-4 py-12'>
 				<Card>
 					<CardContent className='flex flex-col items-center justify-center min-h-[400px]'>
-						<p className='text-muted-foreground'>Loading project details...</p>
+						<p className='text-muted-foreground'>
+							{dictionary?.pages?.about?.developerPortfolio?.loadingProject ||
+								'Loading project details...'}
+						</p>
 					</CardContent>
 				</Card>
 			</div>
 		);
 	}
+
+	const portfolioText = dictionary.pages.about.developerPortfolio;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -61,11 +75,13 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 						<CardTitle>{project.title}</CardTitle>
 						<CardDescription>{project.description}</CardDescription>
 					</CardHeader>
-					{/* <CardContent className='space-y-6'>
+					<CardContent className='space-y-6'>
 						<div className='grid gap-4 md:grid-cols-2'>
 							{project.technologies && (
 								<div>
-									<h3 className='font-semibold mb-2'>Technologies Used</h3>
+									<h3 className='font-semibold mb-2'>
+										{portfolioText.technologiesUsed}
+									</h3>
 									<ul className='list-disc list-inside text-muted-foreground'>
 										{project.technologies.map((tech, index) => (
 											<li key={index}>{tech}</li>
@@ -75,7 +91,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 							)}
 							{project.features && (
 								<div>
-									<h3 className='font-semibold mb-2'>Key Features</h3>
+									<h3 className='font-semibold mb-2'>
+										{portfolioText.keyFeatures}
+									</h3>
 									<ul className='list-disc list-inside text-muted-foreground'>
 										{project.features.map((feature, index) => (
 											<li key={index}>{feature}</li>
@@ -92,12 +110,12 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 										href={project.link}
 										target='_blank'
 										rel='noopener noreferrer'>
-										View Project
+										{portfolioText.viewProject}
 									</Link>
 								</Button>
 							</div>
 						)}
-					</CardContent> */}
+					</CardContent>
 				</Card>
 			</div>
 		</main>

@@ -15,25 +15,9 @@ export default async function PersonalGrowth({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
-
-	const growthAreas = [
-		{
-			title: 'Skill Development',
-			description: 'Enhance your professional capabilities',
-			icon: '🎯'
-		},
-		{
-			title: 'Career Growth',
-			description: 'Strategic career planning and advancement',
-			icon: '📈'
-		},
-		{
-			title: 'Personal Development',
-			description: 'Build confidence and leadership skills',
-			icon: '🌱'
-		}
-	];
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.individuals.personalGrowth;
+	const commonCta = dictionary.pages.individuals.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -42,11 +26,10 @@ export default async function PersonalGrowth({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							Personal Growth Services
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Unlock your potential and achieve personal excellence through
-							targeted mentoring
+							{t.hero.subtitle}
 						</p>
 					</div>
 				</div>
@@ -55,14 +38,16 @@ export default async function PersonalGrowth({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{growthAreas.map(area => (
-						<Card key={area.title} className='hover:shadow-lg transition-all'>
+					{t.services.map(service => (
+						<Card
+							key={service.title}
+							className='hover:shadow-lg transition-all'>
 							<CardHeader>
 								<div className='flex items-center gap-4'>
-									<span className='text-4xl'>{area.icon}</span>
+									<span className='text-4xl'>{service.icon}</span>
 									<div>
-										<CardTitle>{area.title}</CardTitle>
-										<CardDescription>{area.description}</CardDescription>
+										<CardTitle>{service.title}</CardTitle>
+										<CardDescription>{service.description}</CardDescription>
 									</div>
 								</div>
 							</CardHeader>
@@ -77,28 +62,26 @@ export default async function PersonalGrowth({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<Card>
 							<CardHeader>
-								<CardTitle>Our Approach</CardTitle>
+								<CardTitle>{t.approach.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Personalized growth assessment</li>
-									<li>• Custom development plans</li>
-									<li>• Regular progress tracking</li>
-									<li>• Continuous feedback and support</li>
+									{t.approach.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
 
 						<Card>
 							<CardHeader>
-								<CardTitle>{"What You'll Gain"}</CardTitle>
+								<CardTitle>{t.benefits.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Enhanced professional skills</li>
-									<li>• Improved self-confidence</li>
-									<li>• Clear career direction</li>
-									<li>• Better decision-making abilities</li>
+									{t.benefits.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
@@ -110,36 +93,16 @@ export default async function PersonalGrowth({
 			<section className='container px-4 md:px-6 py-12 md:py-24'>
 				<Card>
 					<CardHeader>
-						<CardTitle className='text-2xl'>Growth Journey</CardTitle>
-						<CardDescription>
-							Your path to personal and professional excellence
-						</CardDescription>
+						<CardTitle className='text-2xl'>{t.process.title}</CardTitle>
+						<CardDescription>{t.process.subtitle}</CardDescription>
 					</CardHeader>
 					<CardContent className='grid gap-4 md:grid-cols-2'>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Assessment</h3>
-							<p className='text-muted-foreground'>
-								Understanding your current position and goals
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Planning</h3>
-							<p className='text-muted-foreground'>
-								Creating your personalized development roadmap
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Implementation</h3>
-							<p className='text-muted-foreground'>
-								Taking action and developing new skills
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Evolution</h3>
-							<p className='text-muted-foreground'>
-								Continuous growth and advancement
-							</p>
-						</div>
+						{t.process.steps.map(step => (
+							<div key={step.title} className='space-y-2'>
+								<h3 className='font-semibold'>{step.title}</h3>
+								<p className='text-muted-foreground'>{step.description}</p>
+							</div>
+						))}
 					</CardContent>
 				</Card>
 			</section>
@@ -150,15 +113,15 @@ export default async function PersonalGrowth({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Start Your Growth Journey?
+								{t.cta.title}
 							</CardTitle>
 							<CardDescription className='text-center text-primary-foreground/80'>
-								Take the first step towards your personal development
+								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Start Now</Link>
+								<Link href='/about/contact'>{commonCta.getStarted}</Link>
 							</Button>
 						</CardContent>
 					</Card>

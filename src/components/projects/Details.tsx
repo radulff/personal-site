@@ -29,13 +29,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
 
 					<section>
 						<h2 className='text-xl font-bold mb-4'>Skills</h2>
-						{/* <div className='grid grid-cols-2 gap-4'>
+						<div className='grid grid-cols-2 gap-4'>
 							{project.skills.map((skill, index) => (
 								<div key={index} className='bg-gray-100 p-4 rounded-lg shadow'>
 									<p className='text-gray-500'>{skill}</p>
 								</div>
 							))}
-						</div> */}
+						</div>
 					</section>
 				</div>
 			</div>

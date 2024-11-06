@@ -94,10 +94,15 @@
 					}
 				],
 				"expertise": "Amplia experiencia en desarrollo web, marketing digital y consultoría empresarial.",
-				"background": "Más de 10 años de experiencia ayudando a las empresas a mejorar su presencia en línea y optimizar su eficiencia operativa.",
-				"approach": "Un enfoque centrado en el cliente, enfocado en brindar soluciones personalizadas que satisfagan necesidades comerciales específicas.",
+				"background": "Más de 10 años de experiencia ayudando a empresas a mejorar su presencia en línea y optimizar su eficiencia operativa.",
+				"approach": "Un enfoque centrado en el cliente, enfocado en brindar soluciones personalizadas que satisfagan necesidades específicas del negocio.",
 				"skillsTitle": "Habilidades",
-				"skills": ["Habilidad 1", "Habilidad 2", "Habilidad 3", "Habilidad 4"]
+				"skills": ["Habilidad 1", "Habilidad 2", "Habilidad 3", "Habilidad 4"],
+				"showcaseText": "Mostrando mis proyectos técnicos y trabajo de desarrollo",
+				"technologiesUsed": "Tecnologías Utilizadas",
+				"keyFeatures": "Características Principales",
+				"viewProject": "Ver Proyecto",
+				"loadingProject": "Cargando detalles del proyecto..."
 			},
 			"title": "Sobre Mí",
 			"whoAmITitle": "Ingeniero de Software y Consultor Digital",
@@ -242,6 +247,10 @@
 							"description": "Despliegue sin problemas y mantenimiento continuo"
 						}
 					]
+				},
+				"cta": {
+					"title": "¿Listo para Construir tu Próximo Proyecto?",
+					"description": "Hablemos sobre tus necesidades de desarrollo y creemos algo increíble juntos"
 				}
 			},
 			"cryptoWeb3": {
@@ -356,6 +365,125 @@
 					"title": "¿Listo para Potenciar Tu Marketing?",
 					"description": "Creemos una estrategia de marketing que genere resultados",
 					"button": "Comienza Ahora"
+				}
+			},
+			"fiscalOptimization": {
+				"hero": {
+					"title": "Servicios de Optimización Fiscal",
+					"subtitle": "Planificación financiera estratégica y optimización fiscal para tu negocio"
+				},
+				"services": [
+					{
+						"title": "Estrategia Fiscal",
+						"description": "Optimiza tu estructura y planificación fiscal",
+						"icon": "📊"
+					},
+					{
+						"title": "Planificación Financiera",
+						"description": "Desarrollo integral de estrategias financieras",
+						"icon": "💰"
+					},
+					{
+						"title": "Cumplimiento",
+						"description": "Asegura el cumplimiento normativo y reportes",
+						"icon": "✓"
+					}
+				],
+				"benefits": {
+					"title": "Beneficios Clave",
+					"items": [
+						"Reducción de carga fiscal",
+						"Mejor gestión del flujo de caja",
+						"Planificación financiera estratégica",
+						"Estrategias de mitigación de riesgos"
+					]
+				},
+				"approach": {
+					"title": "Nuestra Metodología",
+					"items": [
+						"Análisis financiero exhaustivo",
+						"Estrategias de optimización personalizadas",
+						"Monitoreo regular del rendimiento",
+						"Ajuste continuo de estrategias"
+					]
+				},
+				"process": {
+					"title": "Nuestro Proceso",
+					"subtitle": "Un enfoque sistemático para la optimización fiscal",
+					"steps": [
+						{
+							"title": "Evaluación",
+							"description": "Análisis exhaustivo de la estructura financiera actual"
+						},
+						{
+							"title": "Desarrollo de Estrategia",
+							"description": "Creación de planes de optimización personalizados"
+						},
+						{
+							"title": "Implementación",
+							"description": "Ejecución de estrategias aprobadas"
+						},
+						{
+							"title": "Monitoreo",
+							"description": "Supervisión y ajustes continuos"
+						}
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Optimizar tus Finanzas?",
+					"description": "Hablemos sobre cómo podemos mejorar tu eficiencia financiera",
+					"button": "Agenda una Consulta Gratuita"
+				}
+			},
+			"main": {
+				"hero": {
+					"title": "Soluciones Empresariales",
+					"subtitle": "Servicios empresariales integrales para ayudar a tu empresa a crecer y tener éxito en la era digital"
+				},
+				"services": {
+					"title": "Nuestros Servicios",
+					"subtitle": "Descubre cómo podemos ayudar a tu empresa a crecer",
+					"categories": {
+						"consultancy": {
+							"title": "Consultoría",
+							"description": "Asesoramiento y orientación empresarial estratégica"
+						},
+						"development": {
+							"title": "Desarrollo",
+							"description": "Soluciones digitales y software personalizado"
+						},
+						"cryptoWeb3": {
+							"title": "Cripto y Web3",
+							"description": "Soluciones de blockchain y criptomonedas"
+						},
+						"marketing": {
+							"title": "Marketing",
+							"description": "Estrategias de marketing digital y crecimiento"
+						},
+						"fiscalOptimization": {
+							"title": "Optimización Fiscal",
+							"description": "Eficiencia fiscal y planificación financiera"
+						}
+					}
+				},
+				"approach": {
+					"title": "¿Por Qué Elegir Nuestros Servicios Empresariales?",
+					"description": "Combinamos experiencia, innovación y un historial probado para ofrecer resultados excepcionales para tu empresa.",
+					"steps": [
+						"Años de experiencia trabajando con empresas de diversas industrias y escalas",
+						"Estrategias y soluciones personalizadas diseñadas específicamente para las necesidades de tu negocio",
+						"A la vanguardia con las últimas tecnologías y prácticas empresariales",
+						"Soporte continuo y optimización para el éxito a largo plazo"
+					]
+				},
+				"benefits": {
+					"title": "Nuestros Beneficios",
+					"items": [
+						"Experiencia y Trayectoria",
+						"Soluciones Personalizadas",
+						"Enfoque en Innovación",
+						"Resultados Comprobados"
+					]
 				}
 			}
 		},
@@ -547,6 +675,169 @@
 					"title": "¿Listo para Empezar Tu Viaje?",
 					"description": "Trabajemos juntos para alcanzar tus objetivos",
 					"button": "Agendar una Consulta"
+				}
+			},
+			"main": {
+				"hero": {
+					"title": "Servicios para Individuos",
+					"subtitle": "Orientación y mentoría personalizada para ayudarte a alcanzar tus objetivos personales y profesionales"
+				},
+				"services": {
+					"title": "Nuestros Servicios",
+					"subtitle": "Descubre cómo podemos ayudarte a alcanzar tus metas",
+					"categories": {
+						"personalGrowth": {
+							"title": "Crecimiento Personal",
+							"description": "Desarrolla tus habilidades y alcanza tus objetivos"
+						},
+						"development": {
+							"title": "Desarrollo",
+							"description": "Mentoría y orientación técnica"
+						},
+						"consultancy": {
+							"title": "Consultoría",
+							"description": "Asesoramiento y orientación personal"
+						},
+						"cryptoWeb3": {
+							"title": "Cripto y Web3",
+							"description": "Navega el ecosistema blockchain"
+						},
+						"fiscalOptimization": {
+							"title": "Optimización Fiscal",
+							"description": "Planificación financiera personal"
+						}
+					}
+				},
+				"approach": {
+					"title": "¿Por Qué Elegir Mentoría Individual?",
+					"description": "Obtén orientación y apoyo personalizado para acelerar tu crecimiento y alcanzar tus objetivos más rápido.",
+					"steps": [
+						"Años de experiencia en desarrollo personal y mentoría",
+						"Estrategias personalizadas diseñadas específicamente para tus necesidades",
+						"Aprendizaje flexible adaptado a tu ritmo",
+						"Apoyo y orientación continua para el éxito a largo plazo"
+					]
+				},
+				"benefits": {
+					"title": "Nuestros Beneficios",
+					"items": [
+						"Enfoque Personalizado",
+						"Orientación Experta",
+						"Aprendizaje Flexible",
+						"Resultados Comprobados"
+					]
+				}
+			},
+			"cryptoWeb3": {
+				"hero": {
+					"title": "Guía Personal de Cripto y Web3",
+					"subtitle": "Navega el futuro de los activos digitales y la tecnología blockchain con confianza"
+				},
+				"services": [
+					{
+						"title": "Educación Blockchain",
+						"description": "Aprende los fundamentos y aplicaciones de blockchain",
+						"icon": "📚"
+					},
+					{
+						"title": "Inversión en Cripto",
+						"description": "Orientación personal en inversiones de criptomonedas",
+						"icon": "💰"
+					},
+					{
+						"title": "Navegación Web3",
+						"description": "Aprende a navegar el ecosistema Web3",
+						"icon": "🧭"
+					}
+				],
+				"learning": {
+					"title": "Ruta de Aprendizaje",
+					"items": [
+						"Comprensión de conceptos básicos de blockchain",
+						"Fundamentos de criptomonedas",
+						"Aplicaciones DeFi y Web3",
+						"Mejores prácticas de seguridad"
+					]
+				},
+				"benefits": {
+					"title": "Lo Que Obtendrás",
+					"items": [
+						"Comprensión del mercado cripto",
+						"Habilidades de navegación Web3",
+						"Estrategias de inversión",
+						"Conocimiento de gestión de riesgos"
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Entrar al Mundo Web3?",
+					"description": "Comienza tu viaje en blockchain y criptomonedas hoy"
+				}
+			},
+			"fiscalOptimization": {
+				"hero": {
+					"title": "Optimización Fiscal Personal",
+					"subtitle": "Planificación financiera estratégica y optimización fiscal para individuos"
+				},
+				"services": [
+					{
+						"title": "Planificación Fiscal Personal",
+						"description": "Optimiza tu situación fiscal personal",
+						"icon": "📊"
+					},
+					{
+						"title": "Estrategia de Inversión",
+						"description": "Planificación y asesoramiento inteligente de inversiones",
+						"icon": "💰"
+					},
+					{
+						"title": "Planificación Financiera",
+						"description": "Planificación de objetivos financieros a largo plazo",
+						"icon": "🎯"
+					}
+				],
+				"benefits": {
+					"title": "Beneficios Clave",
+					"items": [
+						"Estructura fiscal personal optimizada",
+						"Mejor planificación financiera",
+						"Aumento de ahorros",
+						"Futuro financiero seguro"
+					]
+				},
+				"approach": {
+					"title": "Nuestro Enfoque",
+					"items": [
+						"Evaluación financiera personal",
+						"Estrategia de optimización personalizada",
+						"Revisión y ajustes regulares",
+						"Enfoque en planificación a largo plazo"
+					]
+				},
+				"process": {
+					"title": "Nuestro Proceso",
+					"subtitle": "Un enfoque sistemático para la optimización financiera personal",
+					"steps": [
+						{
+							"title": "Evaluación Inicial",
+							"description": "Revisión exhaustiva de tu situación financiera"
+						},
+						{
+							"title": "Desarrollo de Estrategia",
+							"description": "Creación de tu plan financiero personalizado"
+						},
+						{
+							"title": "Implementación",
+							"description": "Ejecución de la estrategia financiera optimizada"
+						},
+						{
+							"title": "Monitoreo",
+							"description": "Revisión regular y ajuste de estrategia"
+						}
+					]
+				},
+				"cta": {
+					"title": "¿Listo para Optimizar tus Finanzas?",
+					"description": "Creemos un plan para tu éxito financiero"
 				}
 			}
 		},

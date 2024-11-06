@@ -15,36 +15,33 @@ export default async function Individual({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.individuals.main;
+	const commonCta = dictionary.pages.individuals.common.cta;
 
 	const individualServices = [
 		{
-			title: 'Personal Growth',
-			description: 'Develop your skills and achieve your goals',
+			...t.services.categories.personalGrowth,
 			href: '/individuals/personal-growth',
 			icon: '🌱'
 		},
 		{
-			title: 'Consultancy',
-			description: 'Personal advice and guidance',
+			...t.services.categories.consultancy,
 			href: '/individuals/consultancy',
 			icon: '💡'
 		},
 		{
-			title: 'Development',
-			description: 'Technical mentoring and guidance',
+			...t.services.categories.development,
 			href: '/individuals/development',
 			icon: '💻'
 		},
 		{
-			title: 'Crypto & Web3',
-			description: 'Navigate the blockchain ecosystem',
+			...t.services.categories.cryptoWeb3,
 			href: '/individuals/crypto-web3',
 			icon: '🔗'
 		},
 		{
-			title: 'Fiscal Optimisation',
-			description: 'Personal financial planning',
+			...t.services.categories.fiscalOptimization,
 			href: '/individuals/fiscal-optimisation',
 			icon: '📊'
 		}
@@ -57,14 +54,13 @@ export default async function Individual({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl'>
-							Individual Services
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Personalized guidance and mentoring to help you achieve your
-							personal and professional goals
+							{t.hero.subtitle}
 						</p>
 						<Button variant='default' size='lg' asChild>
-							<Link href='/about/contact'>Start Your Journey</Link>
+							<Link href='/about/contact'>{commonCta.getStarted}</Link>
 						</Button>
 					</div>
 				</div>
@@ -92,7 +88,7 @@ export default async function Individual({
 									className='w-full group-hover:translate-x-1 transition-transform'
 									asChild>
 									<Link href={service.href}>
-										Learn More <span className='ml-2'>→</span>
+										{commonCta.learnMore} <span className='ml-2'>→</span>
 									</Link>
 								</Button>
 							</CardContent>
@@ -107,45 +103,25 @@ export default async function Individual({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<div className='space-y-4'>
 							<h2 className='text-3xl font-bold tracking-tighter'>
-								Why Choose Individual Mentoring?
+								{t.approach.title}
 							</h2>
 							<p className='text-muted-foreground'>
-								Get personalized guidance and support to accelerate your growth
-								and achieve your goals faster.
+								{t.approach.description}
 							</p>
 						</div>
 						<div className='grid gap-4'>
-							<Card>
-								<CardHeader>
-									<CardTitle>Personalized Approach</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className='text-muted-foreground'>
-										Tailored guidance and strategies designed specifically for
-										your needs and goals.
-									</p>
-								</CardContent>
-							</Card>
-							<Card>
-								<CardHeader>
-									<CardTitle>Expert Guidance</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className='text-muted-foreground'>
-										Benefit from years of experience and proven methodologies.
-									</p>
-								</CardContent>
-							</Card>
-							<Card>
-								<CardHeader>
-									<CardTitle>Flexible Learning</CardTitle>
-								</CardHeader>
-								<CardContent>
-									<p className='text-muted-foreground'>
-										Learn at your own pace with adaptable mentoring schedules.
-									</p>
-								</CardContent>
-							</Card>
+							{t.benefits.items.map((benefit: string, index: number) => (
+								<Card key={index}>
+									<CardHeader>
+										<CardTitle>{benefit}</CardTitle>
+									</CardHeader>
+									<CardContent>
+										<p className='text-muted-foreground'>
+											{t.approach.steps[index]}
+										</p>
+									</CardContent>
+								</Card>
+							))}
 						</div>
 					</div>
 				</div>
@@ -157,12 +133,12 @@ export default async function Individual({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Start Your Growth Journey?
+								{commonCta.contact}
 							</CardTitle>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Contact Me Today</Link>
+								<Link href='/about/contact'>{commonCta.schedule}</Link>
 							</Button>
 						</CardContent>
 					</Card>

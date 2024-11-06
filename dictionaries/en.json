@@ -242,6 +242,10 @@
 							"description": "Smooth deployment and ongoing maintenance"
 						}
 					]
+				},
+				"cta": {
+					"title": "Ready to Build Your Next Project?",
+					"description": "Let's discuss your development needs and create something amazing together"
 				}
 			},
 			"cryptoWeb3": {
@@ -356,6 +360,125 @@
 					"title": "Ready to Boost Your Marketing?",
 					"description": "Let's create a marketing strategy that drives results",
 					"button": "Get Started"
+				}
+			},
+			"fiscalOptimization": {
+				"hero": {
+					"title": "Fiscal Optimization Services",
+					"subtitle": "Strategic financial planning and tax optimization for your business"
+				},
+				"services": [
+					{
+						"title": "Tax Strategy",
+						"description": "Optimize your tax structure and planning",
+						"icon": "📊"
+					},
+					{
+						"title": "Financial Planning",
+						"description": "Comprehensive financial strategy development",
+						"icon": "💰"
+					},
+					{
+						"title": "Compliance",
+						"description": "Ensure regulatory compliance and reporting",
+						"icon": "✓"
+					}
+				],
+				"benefits": {
+					"title": "Key Benefits",
+					"items": [
+						"Reduced tax liability",
+						"Improved cash flow management",
+						"Strategic financial planning",
+						"Risk mitigation strategies"
+					]
+				},
+				"approach": {
+					"title": "Our Methodology",
+					"items": [
+						"Comprehensive financial analysis",
+						"Custom optimization strategies",
+						"Regular performance monitoring",
+						"Continuous strategy adjustment"
+					]
+				},
+				"process": {
+					"title": "Our Process",
+					"subtitle": "A systematic approach to fiscal optimization",
+					"steps": [
+						{
+							"title": "Assessment",
+							"description": "Thorough analysis of current financial structure"
+						},
+						{
+							"title": "Strategy Development",
+							"description": "Creation of tailored optimization plans"
+						},
+						{
+							"title": "Implementation",
+							"description": "Execution of approved strategies"
+						},
+						{
+							"title": "Monitoring",
+							"description": "Continuous oversight and adjustments"
+						}
+					]
+				},
+				"cta": {
+					"title": "Ready to Optimize Your Finances?",
+					"description": "Let's discuss how we can improve your financial efficiency",
+					"button": "Schedule a Free Consultation"
+				}
+			},
+			"main": {
+				"hero": {
+					"title": "Business Solutions",
+					"subtitle": "Comprehensive business services to help your company grow and succeed in the digital age"
+				},
+				"services": {
+					"title": "Our Services",
+					"subtitle": "Discover how we can help your business grow",
+					"categories": {
+						"consultancy": {
+							"title": "Consultancy",
+							"description": "Strategic business advice and guidance"
+						},
+						"development": {
+							"title": "Development",
+							"description": "Custom software and digital solutions"
+						},
+						"cryptoWeb3": {
+							"title": "Crypto & Web3",
+							"description": "Blockchain and cryptocurrency solutions"
+						},
+						"marketing": {
+							"title": "Marketing",
+							"description": "Digital marketing and growth strategies"
+						},
+						"fiscalOptimization": {
+							"title": "Fiscal Optimization",
+							"description": "Tax efficiency and financial planning"
+						}
+					}
+				},
+				"approach": {
+					"title": "Why Choose Our Business Services?",
+					"description": "We combine expertise, innovation, and a proven track record to deliver exceptional results for your business.",
+					"steps": [
+						"Years of experience working with businesses across various industries and scales",
+						"Custom strategies and solutions designed specifically for your business needs",
+						"Staying ahead with the latest technologies and business practices",
+						"Continuous support and optimization for long-term success"
+					]
+				},
+				"benefits": {
+					"title": "Our Benefits",
+					"items": [
+						"Expertise & Experience",
+						"Tailored Solutions",
+						"Innovation Focus",
+						"Proven Results"
+					]
 				}
 			}
 		},
@@ -545,8 +668,170 @@
 				},
 				"cta": {
 					"title": "Ready to Start Your Journey?",
-					"description": "Let's work together to achieve your goals",
-					"button": "Schedule a Consultation"
+					"description": "Let's work together to achieve your goals"
+				}
+			},
+			"cryptoWeb3": {
+				"hero": {
+					"title": "Personal Crypto & Web3 Guidance",
+					"subtitle": "Navigate the future of digital assets and blockchain technology with confidence"
+				},
+				"services": [
+					{
+						"title": "Blockchain Education",
+						"description": "Learn blockchain fundamentals and applications",
+						"icon": "📚"
+					},
+					{
+						"title": "Crypto Investment",
+						"description": "Personal cryptocurrency investment guidance",
+						"icon": "💰"
+					},
+					{
+						"title": "Web3 Navigation",
+						"description": "Learn to navigate the Web3 ecosystem",
+						"icon": "🧭"
+					}
+				],
+				"learning": {
+					"title": "Learning Path",
+					"items": [
+						"Understanding blockchain basics",
+						"Cryptocurrency fundamentals",
+						"DeFi and Web3 applications",
+						"Security best practices"
+					]
+				},
+				"benefits": {
+					"title": "What You'll Gain",
+					"items": [
+						"Crypto market understanding",
+						"Web3 navigation skills",
+						"Investment strategies",
+						"Risk management knowledge"
+					]
+				},
+				"cta": {
+					"title": "Ready to Enter the Web3 World?",
+					"description": "Start your journey into blockchain and cryptocurrency today"
+				}
+			},
+			"fiscalOptimization": {
+				"hero": {
+					"title": "Personal Fiscal Optimisation",
+					"subtitle": "Strategic financial planning and tax optimization for individuals"
+				},
+				"services": [
+					{
+						"title": "Personal Tax Planning",
+						"description": "Optimize your personal tax situation",
+						"icon": "📊"
+					},
+					{
+						"title": "Investment Strategy",
+						"description": "Smart investment planning and advice",
+						"icon": "💰"
+					},
+					{
+						"title": "Financial Planning",
+						"description": "Long-term financial goal planning",
+						"icon": "🎯"
+					}
+				],
+				"benefits": {
+					"title": "Key Benefits",
+					"items": [
+						"Optimized personal tax structure",
+						"Better financial planning",
+						"Increased savings",
+						"Secure financial future"
+					]
+				},
+				"approach": {
+					"title": "Our Approach",
+					"items": [
+						"Personal financial assessment",
+						"Custom optimization strategy",
+						"Regular review and adjustments",
+						"Long-term planning focus"
+					]
+				},
+				"process": {
+					"title": "Our Process",
+					"subtitle": "A systematic approach to personal financial optimization",
+					"steps": [
+						{
+							"title": "Initial Assessment",
+							"description": "Comprehensive review of your financial situation"
+						},
+						{
+							"title": "Strategy Development",
+							"description": "Creating your personalized financial plan"
+						},
+						{
+							"title": "Implementation",
+							"description": "Executing the optimized financial strategy"
+						},
+						{
+							"title": "Monitoring",
+							"description": "Regular review and strategy adjustment"
+						}
+					]
+				},
+				"cta": {
+					"title": "Ready to Optimize Your Finances?",
+					"description": "Let's create a plan for your financial success"
+				}
+			},
+			"main": {
+				"hero": {
+					"title": "Individual Services",
+					"subtitle": "Personalized guidance and mentoring to help you achieve your personal and professional goals"
+				},
+				"services": {
+					"title": "Our Services",
+					"subtitle": "Discover how we can help you achieve your goals",
+					"categories": {
+						"personalGrowth": {
+							"title": "Personal Growth",
+							"description": "Develop your skills and achieve your goals"
+						},
+						"development": {
+							"title": "Development",
+							"description": "Technical mentoring and guidance"
+						},
+						"consultancy": {
+							"title": "Consultancy",
+							"description": "Personal advice and guidance"
+						},
+						"cryptoWeb3": {
+							"title": "Crypto & Web3",
+							"description": "Navigate the blockchain ecosystem"
+						},
+						"fiscalOptimization": {
+							"title": "Fiscal Optimisation",
+							"description": "Personal financial planning"
+						}
+					}
+				},
+				"approach": {
+					"title": "Why Choose Individual Mentoring?",
+					"description": "Get personalized guidance and support to accelerate your growth and achieve your goals faster.",
+					"steps": [
+						"Years of experience in personal development and mentoring",
+						"Custom strategies designed specifically for your needs",
+						"Flexible learning adapted to your pace",
+						"Continuous support and guidance for long-term success"
+					]
+				},
+				"benefits": {
+					"title": "Our Benefits",
+					"items": [
+						"Personalized Approach",
+						"Expert Guidance",
+						"Flexible Learning",
+						"Proven Results"
+					]
 				}
 			}
 		},

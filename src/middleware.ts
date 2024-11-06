@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-
-import { i18n } from '../i18nConfig';
-
+import { i18n, Locale } from '../i18nConfig';
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
@@ -17,7 +15,7 @@ function getLocale(request: NextRequest): string {
 
 	// If no locale in pathname, try to get it from the cookie
 	const localeCookie = request.cookies.get('NEXT_LOCALE');
-	if (localeCookie && i18n.locales.includes(localeCookie.value)) {
+	if (localeCookie && i18n.locales.includes(localeCookie.value as Locale)) {
 		return localeCookie.value;
 	}
 

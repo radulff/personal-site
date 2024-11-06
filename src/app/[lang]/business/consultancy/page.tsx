@@ -23,24 +23,7 @@ export default async function Consultancy({
 }) {
 	const dictionary = await getDictionary(lang);
 	const t = dictionary.pages.business.consultancy;
-
-	const consultingServices: Service[] = [
-		{
-			title: 'Strategic Planning',
-			description: 'Long-term business strategy and growth planning',
-			icon: '💡'
-		},
-		{
-			title: 'Process Optimization',
-			description: 'Streamline operations and improve efficiency',
-			icon: '⚡'
-		},
-		{
-			title: 'Market Analysis',
-			description: 'In-depth market research and competitor analysis',
-			icon: '📊'
-		}
-	];
+	const commonCta = dictionary.pages.business.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -49,10 +32,10 @@ export default async function Consultancy({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							{t.hero.title}
+							{t.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							{t.hero.subtitle}
+							{t.subtitle}
 						</p>
 					</div>
 				</div>
@@ -61,7 +44,7 @@ export default async function Consultancy({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{consultingServices.map((service: Service) => (
+					{t.services.map((service: Service) => (
 						<Card
 							key={service.title}
 							className='hover:shadow-lg transition-all'>
@@ -126,7 +109,7 @@ export default async function Consultancy({
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>{t.cta.button}</Link>
+								<Link href='/about/contact'>{commonCta.schedule}</Link>
 							</Button>
 						</CardContent>
 					</Card>

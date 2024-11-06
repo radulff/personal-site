@@ -7,7 +7,6 @@ import {
 	CardHeader,
 	CardTitle
 } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 
 export default async function About({
 	params: { lang }
@@ -70,7 +69,6 @@ export default async function About({
 						</CardContent>
 					</Card>
 
-					{/* Uncomment if you want to include disciplines
 					<Card>
 						<CardHeader>
 							<CardTitle>{locales.pages.about.disciplinesTitle}</CardTitle>
@@ -85,9 +83,6 @@ export default async function About({
 							</ul>
 						</CardContent>
 					</Card>
-					*/}
-
-					{/* Uncomment if you want to include examples
 					<Card>
 						<CardHeader>
 							<CardTitle>{locales.pages.about.examplesTitle}</CardTitle>
@@ -105,7 +100,6 @@ export default async function About({
 							</ul>
 						</CardContent>
 					</Card>
-					*/}
 				</div>
 			</section>
 		</div>

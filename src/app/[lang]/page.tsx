@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Locale } from '../../../i18nConfig';
-import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { getDictionary } from '@/lib/getDictionary';
 import { Button } from '@/components/ui/button';
 import {

@@ -15,25 +15,9 @@ export default async function CryptoWeb3({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
-
-	const cryptoServices = [
-		{
-			title: 'Blockchain Development',
-			description: 'Smart contracts and dApp development',
-			icon: '🔗'
-		},
-		{
-			title: 'Web3 Integration',
-			description: 'Connect your business with blockchain technology',
-			icon: '🌐'
-		},
-		{
-			title: 'Crypto Strategy',
-			description: 'Digital asset management and strategy',
-			icon: '📊'
-		}
-	];
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.business.cryptoWeb3;
+	const commonCta = dictionary.pages.business.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -42,11 +26,10 @@ export default async function CryptoWeb3({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							Crypto & Web3 Solutions
+							{t.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Embrace the future of digital technology with our blockchain and
-							cryptocurrency expertise
+							{t.subtitle}
 						</p>
 					</div>
 				</div>
@@ -55,7 +38,7 @@ export default async function CryptoWeb3({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{cryptoServices.map(service => (
+					{t.services.map((service) => (
 						<Card
 							key={service.title}
 							className='hover:shadow-lg transition-all'>
@@ -79,28 +62,26 @@ export default async function CryptoWeb3({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<Card>
 							<CardHeader>
-								<CardTitle>Why Choose Us for Web3?</CardTitle>
+								<CardTitle>{t.features.whyUs.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Deep understanding of blockchain technology</li>
-									<li>• Experience with multiple blockchain platforms</li>
-									<li>• Security-first development approach</li>
-									<li>• Proven track record in crypto projects</li>
+									{t.features.whyUs.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
 
 						<Card>
 							<CardHeader>
-								<CardTitle>Our Process</CardTitle>
+								<CardTitle>{t.features.process.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Thorough requirements analysis</li>
-									<li>• Custom blockchain solution design</li>
-									<li>• Secure implementation and testing</li>
-									<li>• Ongoing support and maintenance</li>
+									{t.features.process.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
@@ -114,17 +95,15 @@ export default async function CryptoWeb3({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Enter the Web3 Space?
+								{t.cta.title}
 							</CardTitle>
 							<CardDescription className='text-center text-primary-foreground/80'>
-								{
-									"Let's discuss how blockchain technology can transform your business"
-								}
+								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Get Started</Link>
+								<Link href='/about/contact'>{commonCta.getStarted}</Link>
 							</Button>
 						</CardContent>
 					</Card>

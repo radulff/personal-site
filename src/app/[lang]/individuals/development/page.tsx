@@ -15,40 +15,9 @@ export default async function Development({
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
-
-	const developmentAreas = [
-		{
-			title: 'Programming Skills',
-			description: 'Learn modern programming languages and frameworks',
-			icon: '💻'
-		},
-		{
-			title: 'Technical Mentoring',
-			description: 'One-on-one guidance and support',
-			icon: '👨‍🏫'
-		},
-		{
-			title: 'Project Guidance',
-			description: 'Help with personal technical projects',
-			icon: '🚀'
-		}
-	];
-
-	const technologies = [
-		{
-			category: 'Web Development',
-			items: ['JavaScript/TypeScript', 'React', 'Node.js', 'Next.js']
-		},
-		{
-			category: 'Mobile Development',
-			items: ['React Native', 'Flutter', 'iOS', 'Android']
-		},
-		{
-			category: 'Other Skills',
-			items: ['Git', 'DevOps', 'Testing', 'Architecture']
-		}
-	];
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.individuals.development;
+	const commonCta = dictionary.pages.individuals.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -57,10 +26,10 @@ export default async function Development({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							Technical Development Services
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Personalized technical mentoring to help you grow as a developer
+							{t.hero.subtitle}
 						</p>
 					</div>
 				</div>
@@ -69,14 +38,16 @@ export default async function Development({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{developmentAreas.map(area => (
-						<Card key={area.title} className='hover:shadow-lg transition-all'>
+					{t.services.map(service => (
+						<Card
+							key={service.title}
+							className='hover:shadow-lg transition-all'>
 							<CardHeader>
 								<div className='flex items-center gap-4'>
-									<span className='text-4xl'>{area.icon}</span>
+									<span className='text-4xl'>{service.icon}</span>
 									<div>
-										<CardTitle>{area.title}</CardTitle>
-										<CardDescription>{area.description}</CardDescription>
+										<CardTitle>{service.title}</CardTitle>
+										<CardDescription>{service.description}</CardDescription>
 									</div>
 								</div>
 							</CardHeader>
@@ -89,13 +60,13 @@ export default async function Development({
 			<section className='bg-muted py-12 md:py-24'>
 				<div className='container px-4 md:px-6'>
 					<h2 className='text-2xl font-bold text-center mb-12'>
-						{"What You'll Learn"}
+						{t.technologies.title}
 					</h2>
 					<div className='grid gap-6 md:grid-cols-3'>
-						{technologies.map(tech => (
-							<Card key={tech.category}>
+						{t.technologies.categories.map(tech => (
+							<Card key={tech.title}>
 								<CardHeader>
-									<CardTitle>{tech.category}</CardTitle>
+									<CardTitle>{tech.title}</CardTitle>
 								</CardHeader>
 								<CardContent>
 									<ul className='space-y-2'>
@@ -116,34 +87,16 @@ export default async function Development({
 			<section className='container px-4 md:px-6 py-12 md:py-24'>
 				<Card>
 					<CardHeader>
-						<CardTitle className='text-2xl'>Learning Journey</CardTitle>
-						<CardDescription>Your path to technical excellence</CardDescription>
+						<CardTitle className='text-2xl'>{t.process.title}</CardTitle>
+						<CardDescription>{t.process.subtitle}</CardDescription>
 					</CardHeader>
 					<CardContent className='grid gap-4 md:grid-cols-2'>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Assessment</h3>
-							<p className='text-muted-foreground'>
-								Evaluate your current skills and goals
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Learning Plan</h3>
-							<p className='text-muted-foreground'>
-								Create a personalized learning roadmap
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Hands-on Practice</h3>
-							<p className='text-muted-foreground'>
-								Work on real projects and exercises
-							</p>
-						</div>
-						<div className='space-y-2'>
-							<h3 className='font-semibold'>Continuous Growth</h3>
-							<p className='text-muted-foreground'>
-								Regular feedback and skill advancement
-							</p>
-						</div>
+						{t.process.steps.map(step => (
+							<div key={step.title} className='space-y-2'>
+								<h3 className='font-semibold'>{step.title}</h3>
+								<p className='text-muted-foreground'>{step.description}</p>
+							</div>
+						))}
 					</CardContent>
 				</Card>
 			</section>
@@ -154,15 +107,15 @@ export default async function Development({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Level Up Your Tech Skills?
+								{t.cta.title}
 							</CardTitle>
 							<CardDescription className='text-center text-primary-foreground/80'>
-								Start your journey to becoming a better developer today
+								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Start Learning</Link>
+								<Link href='/about/contact'>{commonCta.getStarted}</Link>
 							</Button>
 						</CardContent>
 					</Card>

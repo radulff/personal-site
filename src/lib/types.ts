@@ -4,4 +4,8 @@ export type projectType = {
     image: string;
     description: string;
     details: string;
-  };
+    skills: string[];
+    technologies?: string[];
+    features?: string[];
+    link?: string;
+};

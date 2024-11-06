@@ -10,30 +10,20 @@ import {
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
+interface Service {
+	title: string;
+	description: string;
+	icon: string;
+}
+
 export default async function Consultancy({
 	params: { lang }
 }: {
 	params: { lang: Locale };
 }) {
-	const locales = await getDictionary(lang);
-
-	const consultingServices = [
-		{
-			title: 'Career Guidance',
-			description: 'Professional career path planning',
-			icon: '🎯'
-		},
-		{
-			title: 'Skill Development',
-			description: 'Personal skill enhancement strategies',
-			icon: '📚'
-		},
-		{
-			title: 'Decision Making',
-			description: 'Strategic decision-making support',
-			icon: '🤔'
-		}
-	];
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.pages.individuals.consultancy;
+	const commonCta = dictionary.pages.individuals.common.cta;
 
 	return (
 		<main className='min-h-screen bg-background'>
@@ -42,10 +32,10 @@ export default async function Consultancy({
 				<div className='container px-4 md:px-6'>
 					<div className='flex flex-col items-center space-y-4 text-center'>
 						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
-							Personal Consultancy Services
+							{t.hero.title}
 						</h1>
 						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
-							Expert guidance for your personal and professional development
+							{t.hero.subtitle}
 						</p>
 					</div>
 				</div>
@@ -54,7 +44,7 @@ export default async function Consultancy({
 			{/* Services Grid */}
 			<section className='container px-4 md:px-6 py-12'>
 				<div className='grid gap-6 md:grid-cols-3'>
-					{consultingServices.map(service => (
+					{t.services.map((service: Service) => (
 						<Card
 							key={service.title}
 							className='hover:shadow-lg transition-all'>
@@ -78,28 +68,26 @@ export default async function Consultancy({
 					<div className='grid gap-12 lg:grid-cols-2'>
 						<Card>
 							<CardHeader>
-								<CardTitle>Our Approach</CardTitle>
+								<CardTitle>{t.approach.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Personalized assessment and planning</li>
-									<li>• One-on-one mentoring sessions</li>
-									<li>• Goal-oriented development plans</li>
-									<li>• Regular progress evaluation</li>
+									{t.approach.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
 
 						<Card>
 							<CardHeader>
-								<CardTitle>Benefits</CardTitle>
+								<CardTitle>{t.benefits.title}</CardTitle>
 							</CardHeader>
 							<CardContent>
 								<ul className='space-y-4 text-muted-foreground'>
-									<li>• Clear career direction</li>
-									<li>• Enhanced decision-making skills</li>
-									<li>• Improved professional capabilities</li>
-									<li>• Greater self-confidence</li>
+									{t.benefits.items.map((item: string, index: number) => (
+										<li key={index}>• {item}</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>
@@ -113,15 +101,15 @@ export default async function Consultancy({
 					<Card className='bg-primary text-primary-foreground'>
 						<CardHeader>
 							<CardTitle className='text-2xl md:text-3xl text-center'>
-								Ready to Start Your Journey?
+								{t.cta.title}
 							</CardTitle>
 							<CardDescription className='text-center text-primary-foreground/80'>
-								{"Let's work together to achieve your goals"}
+								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
 							<Button size='lg' variant='secondary' asChild>
-								<Link href='/about/contact'>Schedule a Consultation</Link>
+								<Link href='/about/contact'>{commonCta.schedule}</Link>
 							</Button>
 						</CardContent>
 					</Card>
