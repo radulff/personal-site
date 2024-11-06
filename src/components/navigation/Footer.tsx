@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -10,10 +11,16 @@ import {
 import { i18n } from '../../../i18nConfig';
 import { usePathname, useRouter } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme/theme-toggle';
+import { useState } from 'react';
+import Link from 'next/link';
+import { useToast } from '@/hooks/use-toast';
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{ dictionary: any }> = ({ dictionary }) => {
 	const router = useRouter();
 	const pathName = usePathname();
+	const { toast } = useToast();
+	const [email, setEmail] = useState('');
+	const [isLoading, setIsLoading] = useState(false);
 
 	const currentLocale =
 		i18n.locales.find(locale => pathName?.startsWith(`/${locale}`)) || 'en';
@@ -29,8 +36,71 @@ const Footer: React.FC = () => {
 		return segments.join('/');
 	};
 
+	const handleSubscribe = async (e: React.FormEvent) => {
+		e.preventDefault();
+
+		// Basic email validation
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(email)) {
+			toast({
+				title: dictionary.newsletter.error.invalid,
+				variant: 'destructive'
+			});
+			return;
+		}
+
+		setIsLoading(true);
+
+		// Replace this URL with your Substack publication URL
+		const substackUrl = 'https://raulvila.substack.com/subscribe';
+
+		// Open Substack subscription page in a new tab
+		window.open(`${substackUrl}?email=${encodeURIComponent(email)}`, '_blank');
+
+		toast({
+			title: dictionary.newsletter.success
+		});
+
+		setEmail('');
+		setIsLoading(false);
+	};
+
 	return (
 		<footer className='w-full px-6 py-4'>
+			{/* Newsletter Section */}
+			<div className='max-w-screen-2xl mx-auto mb-8'>
+				<div className='bg-card rounded-lg p-6 shadow-sm'>
+					<div className='max-w-2xl mx-auto text-center'>
+						<h3 className='text-2xl font-bold mb-2'>
+							{dictionary.newsletter.title}
+						</h3>
+						<p className='text-muted-foreground mb-4'>
+							{dictionary.newsletter.subtitle}
+						</p>
+						<form
+							onSubmit={handleSubscribe}
+							className='flex flex-col sm:flex-row gap-3 mb-3'>
+							<Input
+								type='email'
+								placeholder={dictionary.newsletter.placeholder}
+								value={email}
+								onChange={e => setEmail(e.target.value)}
+								className='flex-1'
+								required
+							/>
+							<Button type='submit' disabled={isLoading}>
+								{isLoading ? (
+									<span className='animate-spin'>↻</span>
+								) : (
+									dictionary.newsletter.button
+								)}
+							</Button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			{/* Existing Footer Content */}
 			<div className='max-w-screen-2xl mx-auto flex flex-col md:flex-row md:justify-between items-center gap-4'>
 				{/* Language Switcher - Left on desktop, top on mobile */}
 				<div className='order-1 md:order-1 flex items-center gap-4'>

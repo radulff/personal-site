@@ -9,6 +9,20 @@
 				"links": "Links"
 			},
 			"cta": "Contact me"
+		},
+		"footer": {
+			"newsletter": {
+				"title": "Stay Updated",
+				"subtitle": "Get the latest insights on web development, blockchain, and digital transformation",
+				"placeholder": "Enter your email for weekly tech insights",
+				"button": "Subscribe",
+				"disclaimer": "By subscribing, you agree to our [Privacy Policy](privacy-policy)",
+				"success": "Thanks for subscribing!",
+				"error": {
+					"invalid": "Please enter a valid email",
+					"required": "Email is required"
+				}
+			}
 		}
 	},
 	"pages": {
@@ -67,7 +81,7 @@
 					"description1": "For any inquiries or collaboration opportunities, feel free to reach out to me via email:",
 					"email": "your-email@example.com",
 					"description2": "I'm looking forward to hearing from you!",
-					"embedDescription": "Following is an inline cal.com embed"
+					"embedDescription": "Book a call with me and let's talk about what can I do for you"
 				}
 			},
 			"developerPortfolio": {

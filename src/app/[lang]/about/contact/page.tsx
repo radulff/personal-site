@@ -24,7 +24,7 @@ export default async function Contact({
 			<Recaptcha />
 
 			{/* Hero Section with Form */}
-			<section className='container mx-auto px-4 py-12 md:py-24'>
+			<section className='container mx-auto px-4 py-6 md:py-12'>
 				<div className='grid lg:grid-cols-2 gap-12 items-start'>
 					{/* Left Column - Text Content */}
 					<div className='space-y-6'>
@@ -56,7 +56,7 @@ export default async function Contact({
 			</section>
 
 			{/* Calendar Section */}
-			<section className='bg-muted py-12 md:py-24'>
+			<section className='bg-muted'>
 				<div className='container mx-auto px-4'>
 					<CalendarEmbed title={t.contactMe.embedDescription} />
 				</div>

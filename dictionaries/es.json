@@ -9,6 +9,20 @@
 				"links": "Enlaces"
 			},
 			"cta": "Contáctame"
+		},
+		"footer": {
+			"newsletter": {
+				"title": "Mantente Actualizado",
+				"subtitle": "Recibe las últimas novedades sobre desarrollo web, blockchain y transformación digital",
+				"placeholder": "Ingresa tu email para consejos semanales de tecnología",
+				"button": "Suscribirse",
+				"disclaimer": "Al suscribirte, aceptas nuestra [Política de Privacidad](privacy-policy)",
+				"success": "¡Gracias por suscribirte!",
+				"error": {
+					"invalid": "Por favor ingresa un email válido",
+					"required": "El email es requerido"
+				}
+			}
 		}
 	},
 	"pages": {
@@ -67,7 +81,7 @@
 					"description1": "Para cualquier consulta o oportunidad de colaboración, no dudes en contactarme por correo electrónico:",
 					"email": "tu-email@ejemplo.com",
 					"description2": "¡Espero con interés escuchar de ti!",
-					"embedDescription": "A continuación, una inserción en línea de cal.com"
+					"embedDescription": "Agenda una llamada conmigo y hablemos sobre qué puedo hacer por ti"
 				}
 			},
 			"developerPortfolio": {
