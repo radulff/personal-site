@@ -116,7 +116,7 @@ export default async function RootLayout({
 					enableSystem
 					disableTransitionOnChange>
 					<Header locales={dictionary.layout.header} />
-					<div className='h-dvh'>{children}</div>
+					{children}
 					<Footer />
 				</ThemeProvider>
 			</body>

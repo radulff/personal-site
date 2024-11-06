@@ -38,7 +38,7 @@ export default async function Home({
 	];
 
 	return (
-		<main className='flex flex-col'>
+		<main className='flex flex-col min-h-screen'>
 			{/* Hero Section */}
 			<section className='relative flex flex-col items-center justify-center py-24 text-center px-4'>
 				<div className='absolute inset-0 -z-10 bg-gradient-to-b from-background to-muted' />
