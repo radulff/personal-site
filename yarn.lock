@@ -2944,6 +2944,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"husky@npm:^9.1.6":
+  version: 9.1.6
+  resolution: "husky@npm:9.1.6"
+  bin:
+    husky: bin.js
+  checksum: 10c0/705673db4a247c1febd9c5df5f6a3519106cf0335845027bb50a15fba9b1f542cb2610932ede96fd08008f6d9f49db0f15560509861808b0031cdc0e7c798bac
+  languageName: node
+  linkType: hard
+
 "i18next-resources-to-backend@npm:^1.2.0":
   version: 1.2.0
   resolution: "i18next-resources-to-backend@npm:1.2.0"
@@ -4483,6 +4492,7 @@ __metadata:
     eslint: "npm:^8"
     eslint-config-next: "npm:14.1.4"
     handlebars: "npm:^4.7.8"
+    husky: "npm:^9.1.6"
     i18next: "npm:^23.11.0"
     i18next-resources-to-backend: "npm:^1.2.0"
     lucide-react: "npm:^0.454.0"
