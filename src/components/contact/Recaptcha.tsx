@@ -3,13 +3,8 @@
 import { useEffect } from 'react';
 
 const Recaptcha = () => {
-	const isLocalhost =
-		typeof window !== 'undefined' &&
-		(window.location.hostname === 'localhost' ||
-			window.location.hostname === '127.0.0.1');
-
 	useEffect(() => {
-		if (isLocalhost) {
+		if ((process.env.REAL_ENV = 'dev')) {
 			console.log('Recaptcha disabled in localhost');
 			return;
 		}
@@ -23,7 +18,7 @@ const Recaptcha = () => {
 		return () => {
 			document.head.removeChild(script);
 		};
-	}, [isLocalhost]);
+	}, []);
 
 	return null;
 };

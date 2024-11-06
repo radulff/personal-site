@@ -38,10 +38,6 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 		null | 'submitting' | 'success' | 'error'
 	>(null);
 	const formRef = useRef<HTMLFormElement | null>(null);
-	const isLocalhost =
-		typeof window !== 'undefined' &&
-		(window.location.hostname === 'localhost' ||
-			window.location.hostname === '127.0.0.1');
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -84,7 +80,7 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 		try {
 			let token = 'localhost-token';
 
-			if (!isLocalhost) {
+			if (process.env.REAL_ENV !== 'dev') {
 				token = await (window as any).grecaptcha.execute(
 					env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
 					{ action: 'submit' }
@@ -100,8 +96,7 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 					name: form.name.value,
 					email: form.email.value,
 					subject: form.subject.value,
-					message: form.message.value,
-					isLocalhost
+					message: form.message.value
 				})
 			});
 

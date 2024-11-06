@@ -10,9 +10,9 @@ import { isValidRecaptcha } from '@/lib/recaptcha';
 
 export async function POST(req: NextRequest) {
 	const body = await req.json();
-	const { token, isLocalhost, ...formData } = body;
+	const { token, ...formData } = body;
 
-	if (!isLocalhost) {
+	if (process.env.REAL_ENV !== 'dev') {
 		try {
 			const recaptchaResponse = await fetch(
 				`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
