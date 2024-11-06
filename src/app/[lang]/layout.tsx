@@ -5,7 +5,7 @@ import { i18n, type Locale } from '../../../i18nConfig';
 import Footer from '@/components/navigation/Footer';
 import Header from '@/components/navigation/Header';
 import { getDictionary } from '@/lib/getDictionary';
-import logo from '../../../public/logo.png';
+import logo from '/public/images/logo.png';
 import favicon from '../favicon.ico';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 

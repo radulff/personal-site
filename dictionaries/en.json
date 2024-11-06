@@ -73,8 +73,11 @@
 						"subject": "Subject",
 						"message": "Message"
 					},
-					"recaptchaNode": "This site is protected by reCAPTCHA and the Google [Privacy Policy](privacy-policy) and [Terms of Service](terms).",
-					"buttonSubmit": "Contact"
+					"buttonSubmit": "Send Message",
+					"recaptchaNode": "This site is protected by reCAPTCHA and the Google *LINK:privacy-policy*Privacy Policy*LINK* and *LINK:terms*Terms of Service*LINK* apply.",
+					"success": "Your message has been sent successfully!",
+					"error": "There was an error sending your message. Please try again.",
+					"tryAgain": "Try Again"
 				},
 				"contactMe": {
 					"title": "Contact Me",

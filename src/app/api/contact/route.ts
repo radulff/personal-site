@@ -9,30 +9,37 @@ import { DEFAULT_LANGUAGE } from '@/constants';
 import { isValidRecaptcha } from '@/lib/recaptcha';
 
 export async function POST(req: NextRequest) {
-	const { token, lang, ...data } = await req.json();
+	const body = await req.json();
+	const { token, isLocalhost, ...formData } = body;
 
-	if (
-		!(await isValidRecaptcha(process.env.RECAPTCHA_SECRET_KEY as string, token))
-	) {
-		// logger.trackError(
-		// 	'Invalid Google reCAPTCHA. This user may be a robot',
-		// 	'info',
-		// 	{
-		// 		method: 'post',
-		// 		route: 'api/contact'
-		// 	}
-		// );
-		return NextResponse.json(
-			{ message: 'Invalid recaptcha token' },
-			{ status: 400 }
-		);
+	if (!isLocalhost) {
+		try {
+			const recaptchaResponse = await fetch(
+				`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+				{ method: 'POST' }
+			);
+
+			const recaptchaData = await recaptchaResponse.json();
+
+			if (!recaptchaData.success) {
+				return NextResponse.json(
+					{ error: 'reCAPTCHA verification failed' },
+					{ status: 400 }
+				);
+			}
+		} catch (error) {
+			return NextResponse.json(
+				{ error: 'reCAPTCHA verification failed' },
+				{ status: 400 }
+			);
+		}
 	}
 
 	if (
-		!validators.isStringValid(data.name) ||
-		!validators.isEmailValid(data.email) ||
-		!validators.isStringValid(data.subject) ||
-		!validators.isStringValid(data.message)
+		!validators.isStringValid(formData.name) ||
+		!validators.isEmailValid(formData.email) ||
+		!validators.isStringValid(formData.subject) ||
+		!validators.isStringValid(formData.message)
 	) {
 		// logger.trackMessage(
 		// 	'Invalid data properties. In the usual flow, this error should never be thrown',
@@ -51,17 +58,23 @@ export async function POST(req: NextRequest) {
 			pass: process.env.SMTP_PASSWORD
 		}
 	});
-
-	const templatePath = path.resolve(process.cwd(), 'templates', 'contact.hbs');
+	const templatePath = path.resolve(
+		process.cwd(),
+		'src/app/templates',
+		'contact.hbs'
+	);
 	const templateSource = await fs.readFile(templatePath, 'utf8');
 	const template = handlebars.compile(templateSource);
-	const emailHtml = template({ name: data.name, message: data.message });
+	const emailHtml = template({
+		name: formData.name,
+		message: formData.message
+	});
 
 	const response = await transporter.sendMail({
-		from: data.email,
+		from: formData.email,
 		to: process.env.SMTP_USER,
-		replyTo: data.email,
-		subject: data.subject,
+		replyTo: formData.email,
+		subject: formData.subject,
 		html: emailHtml
 	});
 
@@ -71,7 +84,7 @@ export async function POST(req: NextRequest) {
 				"Nodemailer fails to send the user's email to SMTP_USER. As a result, the user is unable to contact the sales team"
 			),
 			'fatal',
-			data
+			formData
 		);
 		return NextResponse.json(
 			{ message: 'Error when confirming email delivery' },
@@ -80,12 +93,14 @@ export async function POST(req: NextRequest) {
 	}
 
 	const localesContactFeedback: { subject: string; message: string } = (
-		await import(`../../../../dictionaries/${lang ?? DEFAULT_LANGUAGE}.json`)
+		await import(
+			`../../../../dictionaries/${formData.lang ?? DEFAULT_LANGUAGE}.json`
+		)
 	).default.emails.contactFeedback;
 
 	const response2 = await transporter.sendMail({
-		from: data.email,
-		to: data.email,
+		from: formData.email,
+		to: formData.email,
 		subject: localesContactFeedback.subject,
 		text: localesContactFeedback.message
 	});
@@ -96,7 +111,7 @@ export async function POST(req: NextRequest) {
 				'Nodemailer fails to send the confirmation message to the user indicating that the sales team has received their message'
 			),
 			'warning',
-			data
+			formData
 		);
 	}
 

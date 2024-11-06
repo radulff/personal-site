@@ -127,11 +127,12 @@ export default async function Home({
 							<div className='relative'>
 								<div className='absolute -inset-4 bg-gradient-to-r from-forest-400 to-forest-600 rounded-lg blur-lg opacity-20 group-hover:opacity-30 transition-all'></div>
 								<Image
-									src='/logo.png'
-									alt='Raul Vila'
+									src='/images/RaulVila.png'
+									alt='Raül Vila'
 									width={400}
 									height={400}
 									className='relative rounded-lg'
+									priority
 								/>
 							</div>
 						</div>

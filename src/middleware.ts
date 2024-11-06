@@ -32,8 +32,17 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;
 
-	// Skip middleware for static files and API routes
-	if (['/logo.png', '/white-logo.png'].includes(pathname)) return;
+	// Skip middleware for static files, API routes, and public folder
+	if (
+		pathname.startsWith('/_next') || // Next.js internal routes
+		pathname.startsWith('/api') || // API routes
+		pathname.startsWith('/public') || // Public folder
+		pathname.includes('/images/') || // Images folder
+		pathname.includes('.') || // Files with extensions (like favicon.ico, etc.)
+		pathname === '/robots.txt' || // robots.txt
+		pathname === '/sitemap.xml' // sitemap
+	)
+		return;
 
 	// Check if the pathname already has a locale
 	const pathnameHasLocale = i18n.locales.some(
@@ -67,5 +76,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+	matcher: [
+		'/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|public).*)'
+	]
 };

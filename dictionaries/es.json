@@ -73,8 +73,11 @@
 						"subject": "Asunto",
 						"message": "Mensaje"
 					},
-					"recaptchaNode": "Este sitio está protegido por reCAPTCHA y la [Política de Privacidad](privacy-policy) y los [Términos de Servicio](terms) de Google.",
-					"buttonSubmit": "Contactar"
+					"buttonSubmit": "Enviar Mensaje",
+					"recaptchaNode": "Este sitio está protegido por reCAPTCHA y se aplican la *LINK:privacy-policy*Política de Privacidad*LINK* y los *LINK:terms*Términos de Servicio*LINK* de Google.",
+					"success": "¡Tu mensaje ha sido enviado con éxito!",
+					"error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+					"tryAgain": "Intentar de nuevo"
 				},
 				"contactMe": {
 					"title": "Contáctame",

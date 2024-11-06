@@ -12,8 +12,8 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
-import logo from '../../../public/logo.png';
-import whiteLogo from '../../../public/white-logo.png';
+import logo from '../../../public/images/logo.png';
+import whiteLogo from '../../../public/images/white-logo.png';
 
 interface LocaleNavElements {
 	home: string;
@@ -55,8 +55,8 @@ const Header: React.FC<Props> = ({ locales }) => {
 	];
 
 	return (
-		<header className='mx-auto max-w-screen-2xl md:px-24 xs:px-6 px-4 bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-b border-forest-100 dark:border-forest-800'>
-			<nav className='grid md:h-24 h-16 md:grid-cols-[1fr,max-content,1fr] grid-cols-[1fr,max-content,max-content] content-center'>
+		<header className='mx-auto md:px-24 xs:px-6 px-4 bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-b border-forest-100 dark:border-forest-800'>
+			<nav className='grid max-w-screen-2xl md:h-24 h-16 md:grid-cols-[1fr,max-content,1fr] grid-cols-[1fr,max-content,max-content] content-center'>
 				<Button
 					variant='ghost'
 					asChild

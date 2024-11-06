@@ -10,8 +10,8 @@
 				"href": "https://virtuabroker.com/",
 				"title": "VirtuaBroker",
 				"subtitle": "Cryptocurrency Trading Platform",
-				"logo": "/images/logos/virtuabroker.png",
-				"badges": [
+				"logo": "/images/virtuabroker-logo.webp",
+				"badwges": [
 					{
 						"type": "opportunity",
 						"text": "Join Now",
@@ -23,8 +23,8 @@
 				"href": "https://enviadinero.es/",
 				"title": "EnviaDinero",
 				"subtitle": "International Money Transfer Service",
-				"logo": "/images/logos/enviadinero.png",
-				"badges": [
+				"logo": "/images/enviadinero-logo.svg",
+				"badwges": [
 					{
 						"type": "discount",
 						"text": "Save 10%",
@@ -36,7 +36,7 @@
 				"href": "https://plastiks.io/",
 				"title": "Plastiks",
 				"subtitle": "Blockchain-based Plastic Recovery Platform",
-				"logo": "/images/logos/plastiks.png",
+				"logo": "/images/plastiks-logo.webp",
 				"badges": [
 					{
 						"type": "new",
@@ -49,7 +49,7 @@
 				"href": "https://radxu.org/",
 				"title": "Radxu Foundation",
 				"subtitle": "Blockchain Research & Development",
-				"logo": "/images/logos/radxu.png",
+				"logo": "/images/radxu-logo.webp",
 				"badges": [
 					{
 						"type": "opportunity",
@@ -71,7 +71,7 @@
 				"href": "https://virtuabroker.com/es/",
 				"title": "VirtuaBroker",
 				"subtitle": "Plataforma de Trading Automatizado de Criptomonedas",
-				"logo": "/images/logos/virtuabroker.png",
+				"logo": "/images/virtuabroker-logo.webp",
 				"badges": [
 					{
 						"type": "opportunity",
@@ -84,7 +84,7 @@
 				"href": "https://enviadinero.es/",
 				"title": "EnviaDinero",
 				"subtitle": "Servicio de Transferencias Internacionales",
-				"logo": "/images/logos/enviadinero.png",
+				"logo": "/images/enviadinero-logo.svg",
 				"badges": [
 					{
 						"type": "discount",
@@ -97,7 +97,7 @@
 				"href": "https://plastiks.io/es/",
 				"title": "Plastiks",
 				"subtitle": "Plataforma de Recuperación de Plástico Basada en Blockchain",
-				"logo": "/images/logos/plastiks.png",
+				"logo": "/images/plastiks-logo.webp",
 				"badges": [
 					{
 						"type": "new",
@@ -110,7 +110,7 @@
 				"href": "https://radxu.org/es/",
 				"title": "Fundación Radxu",
 				"subtitle": "Investigación y Desarrollo Blockchain",
-				"logo": "/images/logos/radxu.png",
+				"logo": "/images/radxu-logo.webp",
 				"badges": [
 					{
 						"type": "opportunity",

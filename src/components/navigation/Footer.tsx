@@ -24,16 +24,12 @@ const Footer: React.FC<{ dictionary: any }> = ({ dictionary }) => {
 
 	const currentLocale =
 		i18n.locales.find(locale => pathName?.startsWith(`/${locale}`)) || 'en';
+	const alternateLocale = currentLocale === 'en' ? 'es' : 'en';
 
-	const availableLocales = i18n.locales.filter(
-		locale => locale !== currentLocale
-	);
-
-	const redirectedPathName = (locale: string) => {
-		if (!pathName) return '/';
-		const segments = pathName.split('/');
-		segments[1] = locale;
-		return segments.join('/');
+	const toggleLanguage = () => {
+		const segments = pathName?.split('/') || [];
+		segments[1] = alternateLocale;
+		router.push(segments.join('/'));
 	};
 
 	const handleSubscribe = async (e: React.FormEvent) => {
@@ -105,27 +101,15 @@ const Footer: React.FC<{ dictionary: any }> = ({ dictionary }) => {
 
 			{/* Footer Content */}
 			<div className='max-w-screen-2xl mx-auto flex flex-col md:flex-row md:justify-between items-center gap-4'>
-				{/* Language Switcher - Left on desktop, top on mobile */}
+				{/* Language and Theme Toggles */}
 				<div className='order-1 md:order-1 flex items-center gap-4'>
-					<DropdownMenu>
-						<DropdownMenuTrigger asChild>
-							<Button
-								variant='outline'
-								size='sm'
-								className='h-7 w-16 border-forest-100 dark:border-forest-800'>
-								{currentLocale.toUpperCase()}
-							</Button>
-						</DropdownMenuTrigger>
-						<DropdownMenuContent align='center' className='w-16'>
-							{availableLocales.map(locale => (
-								<DropdownMenuItem
-									key={locale}
-									onClick={() => router.push(redirectedPathName(locale))}>
-									{locale.toUpperCase()}
-								</DropdownMenuItem>
-							))}
-						</DropdownMenuContent>
-					</DropdownMenu>
+					<Button
+						variant='outline'
+						size='sm'
+						onClick={toggleLanguage}
+						className='h-7 w-16 border-forest-100 dark:border-forest-800 hover:bg-forest-50 dark:hover:bg-forest-800/50'>
+						{currentLocale.toUpperCase()}
+					</Button>
 					<ThemeToggle />
 				</div>
 
