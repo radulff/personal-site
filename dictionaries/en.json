@@ -916,5 +916,37 @@
 			"subject": "[no reply]: Thanks for contacting us",
 			"message": "We have received your request. We will get in touch as soon as possible."
 		}
+	},
+	"metadata": {
+		"default": {
+			"title": "Raül Vila | Software Engineer & Consultant",
+			"description": "Software Engineer, Consultant, and Digital Entrepreneur specializing in web development, blockchain technology, and digital transformation.",
+			"keywords": [
+				"Software Engineer",
+				"Web Development",
+				"Blockchain",
+				"Consultant",
+				"Digital Transformation",
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Web3",
+				"Cryptocurrency"
+			],
+			"author": "Raül Vila",
+			"creator": "Raül Vila",
+			"publisher": "Raül Vila"
+		},
+		"openGraph": {
+			"title": "Raül Vila | Software Engineer & Consultant",
+			"description": "Software Engineer, Consultant, and Digital Entrepreneur specializing in web development, blockchain technology, and digital transformation.",
+			"siteName": "Raül Vila",
+			"locale": "en_US"
+		},
+		"twitter": {
+			"title": "Raül Vila | Software Engineer & Consultant",
+			"description": "Software Engineer, Consultant, and Digital Entrepreneur specializing in web development, blockchain technology, and digital transformation.",
+			"creator": "@_radulff"
+		}
 	}
 }

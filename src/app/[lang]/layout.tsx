@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../../app/globals.css';
 import { i18n, type Locale } from '../../../i18nConfig';
@@ -8,6 +7,7 @@ import Header from '@/components/navigation/Header';
 import { getDictionary } from '@/lib/getDictionary';
 import logo from '../../../public/logo.png';
 import favicon from '../favicon.ico';
+import { ThemeProvider } from '@/components/theme/theme-provider';
 
 export async function generateStaticParams() {
 	return i18n.locales.map(locale => ({ lang: locale }));
@@ -15,87 +15,80 @@ export async function generateStaticParams() {
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-	title: {
-		default: 'Raül Vila | Software Engineer & Consultant',
-		template: '%s | Raül Vila'
-	},
-	description:
-		'Software Engineer, Consultant, and Digital Entrepreneur specializing in web development, blockchain technology, and digital transformation.',
-	keywords: [
-		'Software Engineer',
-		'Web Development',
-		'Blockchain',
-		'Consultant',
-		'Digital Transformation',
-		'React',
-		'Next.js',
-		'TypeScript',
-		'Web3',
-		'Cryptocurrency'
-	],
-	authors: [{ name: 'Raül Vila' }],
-	creator: 'Raül Vila',
-	publisher: 'Raül Vila',
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
+export async function generateMetadata({
+	params: { lang }
+}: {
+	params: { lang: Locale };
+}) {
+	const dictionary = await getDictionary(lang);
+	const t = dictionary.metadata;
+
+	return {
+		metadataBase: new URL('https://raulvila.com'),
+		title: {
+			default: t.default.title,
+			template: `%s | ${t.default.title.split('|')[0].trim()}`
+		},
+		description: t.default.description,
+		keywords: t.default.keywords,
+		authors: [{ name: t.default.author }],
+		creator: t.default.creator,
+		publisher: t.default.publisher,
+		robots: {
 			index: true,
 			follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1
-		}
-	},
-	openGraph: {
-		type: 'website',
-		locale: 'en_US',
-		url: 'https://raulvila.com',
-		siteName: 'Raül Vila',
-		title: 'Raül Vila | Software Engineer & Consultant',
-		description:
-			'Software Engineer, Consultant, and Digital Entrepreneur specializing in web development, blockchain technology, and digital transformation.',
-		images: [
-			{
-				url: '../../../public/logo.png',
-				width: 1200,
-				height: 630,
-				alt: 'Raül Vila'
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1
 			}
-		]
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: 'Raül Vila | Software Engineer & Consultant',
-		description:
-			'Software Engineer, Consultant, and Digital Entrepreneur specializing in web development, blockchain technology, and digital transformation.',
-		creator: '@_radulff',
-		images: ['../../../public/logo.png']
-	},
-	icons: {
-		icon: [{ url: favicon.src }, { url: logo.src, type: 'image/png' }],
-		apple: [{ url: logo.src }],
-		other: [
-			{
-				rel: 'mask-icon',
-				url: logo.src
+		},
+		openGraph: {
+			type: 'website',
+			locale: t.openGraph.locale,
+			url: 'https://raulvila.com',
+			siteName: t.openGraph.siteName,
+			title: t.openGraph.title,
+			description: t.openGraph.description,
+			images: [
+				{
+					url: logo.src,
+					width: 1200,
+					height: 630,
+					alt: t.openGraph.siteName
+				}
+			]
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: t.twitter.title,
+			description: t.twitter.description,
+			creator: t.twitter.creator,
+			images: [logo.src]
+		},
+		icons: {
+			icon: [{ url: favicon.src }, { url: logo.src, type: 'image/png' }],
+			apple: [{ url: logo.src }],
+			other: [
+				{
+					rel: 'mask-icon',
+					url: logo.src
+				}
+			]
+		},
+		manifest: '/site.webmanifest',
+		alternates: {
+			canonical: 'https://raulvila.com',
+			languages: {
+				'en-US': '/en',
+				'es-ES': '/es'
 			}
-		]
-	},
-	manifest: '/site.webmanifest',
-	alternates: {
-		canonical: 'https://raulvila.com',
-		languages: {
-			'en-US': '/en',
-			'es-ES': '/es'
-		}
-	},
-	// verification: {
-	// 	google: 'your-google-site-verification' // Add your Google verification code
-	// },
-	category: 'technology'
-};
+		},
+		category: 'technology'
+	};
+}
 
 export default async function RootLayout({
 	children,
@@ -111,15 +104,21 @@ export default async function RootLayout({
 	const dictionary = await getDictionary(lang);
 
 	return (
-		<html lang={lang}>
+		<html lang={lang} suppressHydrationWarning>
 			<head>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='canonical' href='https://raulvila.com' />
 			</head>
 			<body className={inter.className}>
-				<Header locales={dictionary.layout.header} />
-				{children}
-				<Footer />
+				<ThemeProvider
+					attribute='class'
+					defaultTheme='system'
+					enableSystem
+					disableTransitionOnChange>
+					<Header locales={dictionary.layout.header} />
+					<div className='h-dvh'>{children}</div>
+					<Footer />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

@@ -38,16 +38,16 @@ export default async function Home({
 	];
 
 	return (
-		<main className='flex flex-col min-h-screen'>
+		<main className='flex flex-col'>
 			{/* Hero Section */}
 			<section className='relative flex flex-col items-center justify-center py-24 text-center px-4'>
-				<div className='absolute inset-0 -z-10 bg-gradient-to-b from-gray-100 to-white' />
+				<div className='absolute inset-0 -z-10 bg-gradient-to-b from-background to-muted' />
 				<div className='space-y-8 max-w-4xl mx-auto'>
 					<div className='space-y-4'>
-						<h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl'>
+						<h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-foreground'>
 							{t.hero.title}
 						</h1>
-						<p className='mx-auto max-w-[700px] text-gray-500 md:text-xl'>
+						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
 							{t.hero.subtitle}
 						</p>
 					</div>
@@ -63,11 +63,13 @@ export default async function Home({
 			</section>
 
 			{/* Services Section */}
-			<section className='py-16 px-4 bg-gray-50'>
+			<section className='py-16 px-4 bg-muted'>
 				<div className='max-w-6xl mx-auto space-y-8'>
 					<div className='text-center space-y-4'>
-						<h2 className='text-3xl font-bold'>{t.services.title}</h2>
-						<p className='text-gray-500 max-w-[600px] mx-auto'>
+						<h2 className='text-3xl font-bold text-foreground'>
+							{t.services.title}
+						</h2>
+						<p className='text-muted-foreground max-w-[600px] mx-auto'>
 							{t.services.subtitle}
 						</p>
 					</div>
@@ -76,10 +78,14 @@ export default async function Home({
 						{services.map(service => (
 							<Card
 								key={service.title}
-								className='hover:shadow-lg transition-shadow'>
+								className='hover:shadow-lg transition-shadow bg-card'>
 								<CardHeader>
-									<CardTitle>{service.title}</CardTitle>
-									<CardDescription>{service.description}</CardDescription>
+									<CardTitle className='text-card-foreground'>
+										{service.title}
+									</CardTitle>
+									<CardDescription className='text-muted-foreground'>
+										{service.description}
+									</CardDescription>
 								</CardHeader>
 								<CardContent>
 									<Button variant='ghost' asChild className='w-full'>
@@ -93,7 +99,7 @@ export default async function Home({
 			</section>
 
 			{/* Profile Section */}
-			<section className='py-16 px-4'>
+			<section className='py-16 px-4 bg-background'>
 				<div className='max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8'>
 					<div className='md:w-1/2'>
 						<Image
@@ -101,12 +107,14 @@ export default async function Home({
 							alt='Raul Vila'
 							width={400}
 							height={400}
-							className='rounded-lg shadow-xl'
+							className='rounded-lg shadow-xl dark:shadow-none'
 						/>
 					</div>
 					<div className='md:w-1/2 space-y-4'>
-						<h2 className='text-3xl font-bold'>{t.about.title}</h2>
-						<p className='text-gray-600'>{t.about.description}</p>
+						<h2 className='text-3xl font-bold text-foreground'>
+							{t.about.title}
+						</h2>
+						<p className='text-muted-foreground'>{t.about.description}</p>
 						<div className='flex gap-4'>
 							<Button variant='outline' asChild>
 								<Link href='/links'>{t.cta.links}</Link>

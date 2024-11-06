@@ -922,5 +922,37 @@
 			"subject": "[no responder]: Gracias por contactarnos",
 			"message": "Hemos recibido tu solicitud. Nos pondremos en contacto lo antes posible."
 		}
+	},
+	"metadata": {
+		"default": {
+			"title": "Raül Vila | Ingeniero de Software y Consultor",
+			"description": "Ingeniero de Software, Consultor y Emprendedor Digital especializado en desarrollo web, tecnología blockchain y transformación digital.",
+			"keywords": [
+				"Ingeniero de Software",
+				"Desarrollo Web",
+				"Blockchain",
+				"Consultor",
+				"Transformación Digital",
+				"React",
+				"Next.js",
+				"TypeScript",
+				"Web3",
+				"Criptomonedas"
+			],
+			"author": "Raül Vila",
+			"creator": "Raül Vila",
+			"publisher": "Raül Vila"
+		},
+		"openGraph": {
+			"title": "Raül Vila | Ingeniero de Software y Consultor",
+			"description": "Ingeniero de Software, Consultor y Emprendedor Digital especializado en desarrollo web, tecnología blockchain y transformación digital.",
+			"siteName": "Raül Vila",
+			"locale": "es_ES"
+		},
+		"twitter": {
+			"title": "Raül Vila | Ingeniero de Software y Consultor",
+			"description": "Ingeniero de Software, Consultor y Emprendedor Digital especializado en desarrollo web, tecnología blockchain y transformación digital.",
+			"creator": "@_radulff"
+		}
 	}
 }

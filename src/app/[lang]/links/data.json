@@ -1,60 +1,124 @@
 {
-	"name": "Raül Vila",
-	"title": "Software Engineer",
-	"subtitle": "Dumbass lolete",
-	"links": [
-		{
-			"href": "https://audicity.io/",
-			"title": "Audicity",
-			"image": ""
+	"en": {
+		"profile": {
+			"name": "Raül Vila",
+			"title": "Software Engineer",
+			"subtitle": "Blockchain Developer & Digital Consultant"
 		},
-		{
-			"href": "https://atlasexplorer.io/",
-			"title": "Atlas Explorer",
-			"image": ""
+		"links": [
+			{
+				"href": "https://virtuabroker.com/",
+				"title": "VirtuaBroker",
+				"subtitle": "Cryptocurrency Trading Platform",
+				"logo": "/images/logos/virtuabroker.png",
+				"badges": [
+					{
+						"type": "opportunity",
+						"text": "Join Now",
+						"icon": "🚀"
+					}
+				]
+			},
+			{
+				"href": "https://enviadinero.es/",
+				"title": "EnviaDinero",
+				"subtitle": "International Money Transfer Service",
+				"logo": "/images/logos/enviadinero.png",
+				"badges": [
+					{
+						"type": "discount",
+						"text": "Save 10%",
+						"icon": "💰"
+					}
+				]
+			},
+			{
+				"href": "https://plastiks.io/",
+				"title": "Plastiks",
+				"subtitle": "Blockchain-based Plastic Recovery Platform",
+				"logo": "/images/logos/plastiks.png",
+				"badges": [
+					{
+						"type": "new",
+						"text": "Eco-friendly",
+						"icon": "🌱"
+					}
+				]
+			},
+			{
+				"href": "https://radxu.org/",
+				"title": "Radxu Foundation",
+				"subtitle": "Blockchain Research & Development",
+				"logo": "/images/logos/radxu.png",
+				"badges": [
+					{
+						"type": "opportunity",
+						"text": "Join Us",
+						"icon": "🤝"
+					}
+				]
+			}
+		]
+	},
+	"es": {
+		"profile": {
+			"name": "Raül Vila",
+			"title": "Ingeniero de Software",
+			"subtitle": "Desarrollador Blockchain & Consultor Digital"
 		},
-		{
-			"href": "https://radxu.org/",
-			"title": "Radxu Foundation",
-			"image": ""
-		},
-		{
-			"href": "https://app.radxu.org/",
-			"title": "Radxu Foundation - dApp",
-			"image": ""
-		},
-		{
-			"href": "https://virtuabroker.com/",
-			"title": "VirtuaBroker",
-			"image": ""
-		},
-		{
-			"href": "https://buycrypto.virtuabroker.com/",
-			"title": "Buy Crypto With VirtuaBroker",
-			"image": ""
-		},
-		{
-			"href": "https://plastiks.io/",
-			"title": "Plastiks",
-			"image": ""
-		}
-	],
-	"socials": [
-		{
-			"href": "https://linkedin.com/in/raulvila",
-			"title": "LinkedIn"
-		},
-		{
-			"href": "https://x.com/_radulff",
-			"title": "Twitter"
-		},
-		{
-			"href": "https://github.com/radulff",
-			"title": "Github"
-		},
-		{
-			"href": "https://gitlab.com/radulff",
-			"title": "Gitlab"
-		}
-	]
+		"links": [
+			{
+				"href": "https://virtuabroker.com/es/",
+				"title": "VirtuaBroker",
+				"subtitle": "Plataforma de Trading Automatizado de Criptomonedas",
+				"logo": "/images/logos/virtuabroker.png",
+				"badges": [
+					{
+						"type": "opportunity",
+						"text": "Únete",
+						"icon": "🚀"
+					}
+				]
+			},
+			{
+				"href": "https://enviadinero.es/",
+				"title": "EnviaDinero",
+				"subtitle": "Servicio de Transferencias Internacionales",
+				"logo": "/images/logos/enviadinero.png",
+				"badges": [
+					{
+						"type": "discount",
+						"text": "Ahorra 50%",
+						"icon": "💰"
+					}
+				]
+			},
+			{
+				"href": "https://plastiks.io/es/",
+				"title": "Plastiks",
+				"subtitle": "Plataforma de Recuperación de Plástico Basada en Blockchain",
+				"logo": "/images/logos/plastiks.png",
+				"badges": [
+					{
+						"type": "new",
+						"text": "Ecológico",
+						"icon": "🌱"
+					}
+				]
+			},
+			{
+				"href": "https://radxu.org/es/",
+				"title": "Fundación Radxu",
+				"subtitle": "Investigación y Desarrollo Blockchain",
+				"logo": "/images/logos/radxu.png",
+				"badges": [
+					{
+						"type": "opportunity",
+						"text": "Únete",
+						"icon": "🤝"
+					}
+				]
+			}
+		]
+	}
 }

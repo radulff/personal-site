@@ -13,6 +13,7 @@ import {
 	navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
 import logo from '../../../public/logo.png';
+import whiteLogo from '../../../public/white-logo.png';
 
 interface LocaleNavElements {
 	home: string;
@@ -62,7 +63,7 @@ const Header: React.FC<Props> = ({ locales }) => {
 					className='flex md:w-48 w-32 md:p-4 p-3'>
 					<Link href={'/'}>
 						<Image
-							src={logo}
+							src={whiteLogo}
 							alt='Logo'
 							width={150}
 							height={150}

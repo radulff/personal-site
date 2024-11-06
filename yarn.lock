@@ -3831,6 +3831,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-themes@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "next-themes@npm:0.4.3"
+  peerDependencies:
+    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+  checksum: 10c0/81dbe9efed2b10169e4ecd2ff59f3dedc091518c92a79354b863ccdcc444a061125de975af5c0c123ce9a1ebd7b20b05a1fdbfcf2aaeeb337fec03fe38fd8cb0
+  languageName: node
+  linkType: hard
+
 "next@npm:14.1.4":
   version: 14.1.4
   resolution: "next@npm:14.1.4"
@@ -4447,6 +4457,7 @@ __metadata:
     lucide-react: "npm:^0.454.0"
     negotiator: "npm:^0.6.3"
     next: "npm:14.1.4"
+    next-themes: "npm:^0.4.3"
     nodemailer: "npm:^6.9.14"
     postcss: "npm:^8"
     react: "npm:^18"

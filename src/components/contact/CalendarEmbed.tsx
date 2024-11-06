@@ -9,14 +9,14 @@ interface CalendarEmbedProps {
 
 const CalendarEmbed = ({ title }: CalendarEmbedProps) => {
 	return (
-		<Card className='max-w-4xl mx-auto'>
+		<Card className='w-auto mx-auto h-auto'>
 			<CardHeader>
 				<CardTitle>{title}</CardTitle>
 			</CardHeader>
 			<CardContent>
 				<div className='aspect-video w-full rounded-lg overflow-hidden'>
 					<Cal
-						calLink='rick/get-rick-rolled'
+						calLink='raul-vila'
 						style={{ width: '100%', height: '100%', border: 'none' }}
 					/>
 				</div>
