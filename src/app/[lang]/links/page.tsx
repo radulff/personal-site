@@ -38,13 +38,13 @@ interface LocaleData {
 const getBadgeStyles = (type: 'new' | 'discount' | 'opportunity') => {
 	switch (type) {
 		case 'new':
-			return 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-100';
+			return 'bg-forest-100 dark:bg-forest-900 text-forest-800 dark:text-forest-100';
 		case 'discount':
-			return 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100';
+			return 'bg-forest-100 dark:bg-forest-900 text-forest-800 dark:text-forest-100';
 		case 'opportunity':
-			return 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-100';
+			return 'bg-forest-100 dark:bg-forest-900 text-forest-800 dark:text-forest-100';
 		default:
-			return 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100';
+			return 'bg-forest-100 dark:bg-forest-900 text-forest-800 dark:text-forest-100';
 	}
 };
 
@@ -56,15 +56,21 @@ export default async function Links({
 	const localeData = data[lang as keyof typeof data] as LocaleData;
 
 	return (
-		<div className='min-h-screen bg-background'>
-			<div className='max-w-2xl mx-auto px-4 py-12 space-y-8'>
+		<div className='min-h-screen relative'>
+			{/* Background with gradient */}
+			<div className='absolute inset-0 bg-gradient-to-b from-forest-50 via-white to-forest-50 dark:from-forest-950 dark:via-forest-900 dark:to-forest-950 -z-10' />
+			<div className='absolute inset-0 opacity-20 bg-[url("/grid-pattern.svg")] -z-10' />
+
+			<div className='max-w-2xl mx-auto px-4 py-24 space-y-8'>
 				{/* Profile Section */}
 				<div className='text-center space-y-4'>
-					<h1 className='text-2xl font-bold text-foreground'>
+					<h1 className='text-2xl font-bold text-black dark:text-white'>
 						{localeData.profile.name}
 					</h1>
-					<p className='text-muted-foreground'>{localeData.profile.title}</p>
-					<p className='text-sm text-muted-foreground'>
+					<p className='text-black/80 dark:text-white/80'>
+						{localeData.profile.title}
+					</p>
+					<p className='text-sm text-black/60 dark:text-white/60'>
 						{localeData.profile.subtitle}
 					</p>
 				</div>
@@ -72,7 +78,9 @@ export default async function Links({
 				{/* Links Section */}
 				<div className='space-y-4'>
 					{localeData.links.map((link: LinkItem) => (
-						<Card key={link.href} className='hover:shadow-md transition-shadow'>
+						<Card
+							key={link.href}
+							className='hover:scale-105 transition-all duration-300 bg-white/50 dark:bg-forest-900/50 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 							<CardContent className='p-4'>
 								<Button
 									variant='ghost'
@@ -84,7 +92,7 @@ export default async function Links({
 										rel='noopener noreferrer'
 										className='flex items-center gap-3'>
 										<div className='flex items-center gap-3 flex-1'>
-											{/* {link.logo && (
+											{link.logo && (
 												<div className='w-10 h-10 relative flex-shrink-0'>
 													<Image
 														src={link.logo}
@@ -93,17 +101,17 @@ export default async function Links({
 														className='object-contain rounded-sm'
 													/>
 												</div>
-											)} */}
+											)}
 											<div className='text-left'>
-												<div className='font-medium text-foreground'>
+												<div className='font-medium text-black dark:text-white'>
 													{link.title}
 												</div>
-												<div className='text-sm text-muted-foreground'>
+												<div className='text-sm text-black/70 dark:text-white/70'>
 													{link.subtitle}
 												</div>
 											</div>
 										</div>
-										{/* {link.badges && link.badges.length > 0 && (
+										{link.badges && link.badges.length > 0 && (
 											<div className='flex gap-2'>
 												{link.badges.map((badge: Badge, index: number) => (
 													<span
@@ -115,7 +123,7 @@ export default async function Links({
 													</span>
 												))}
 											</div>
-										)} */}
+										)}
 									</a>
 								</Button>
 							</CardContent>

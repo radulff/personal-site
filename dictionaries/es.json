@@ -78,8 +78,7 @@
 				},
 				"contactMe": {
 					"title": "Contáctame",
-					"description1": "Para cualquier consulta o oportunidad de colaboración, no dudes en contactarme por correo electrónico:",
-					"email": "tu-email@ejemplo.com",
+					"description1": "Para cualquier consulta o oportunidad de colaboración, no dudes en contactarme.",
 					"description2": "¡Espero con interés escuchar de ti!",
 					"embedDescription": "Agenda una llamada conmigo y hablemos sobre qué puedo hacer por ti"
 				}

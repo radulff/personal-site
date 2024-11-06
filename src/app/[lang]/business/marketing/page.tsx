@@ -30,15 +30,19 @@ export default async function Marketing({
 	const t = dictionary.pages.business.marketing;
 
 	return (
-		<main className='min-h-screen bg-background'>
+		<main className='min-h-screen relative'>
+			{/* Background with gradient */}
+			<div className='absolute inset-0 bg-gradient-to-b from-forest-50 via-white to-forest-50 dark:from-forest-950 dark:via-forest-900 dark:to-forest-950 -z-10' />
+			<div className='absolute inset-0 opacity-20 bg-[url("/grid-pattern.svg")] -z-10' />
+
 			{/* Hero Section */}
-			<section className='relative py-12 md:py-24'>
-				<div className='container px-4 md:px-6'>
-					<div className='flex flex-col items-center space-y-4 text-center'>
-						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
+			<section className='relative py-24'>
+				<div className='container px-4'>
+					<div className='flex flex-col items-center space-y-6 text-center'>
+						<h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-black dark:text-white'>
 							{t.hero.title}
 						</h1>
-						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
+						<p className='mx-auto max-w-[700px] text-black/80 dark:text-white/80 text-lg md:text-xl'>
 							{t.hero.subtitle}
 						</p>
 					</div>
@@ -46,18 +50,22 @@ export default async function Marketing({
 			</section>
 
 			{/* Services Grid */}
-			<section className='container px-4 md:px-6 py-12'>
-				<div className='grid gap-6 md:grid-cols-3'>
+			<section className='container px-4 py-24'>
+				<div className='grid gap-8 md:grid-cols-3'>
 					{t.services.map((service: MarketingService) => (
 						<Card
 							key={service.title}
-							className='hover:shadow-lg transition-all'>
+							className='group hover:scale-105 transition-all duration-300 bg-white/50 dark:bg-forest-900/50 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 							<CardHeader>
 								<div className='flex items-center gap-4'>
 									<span className='text-4xl'>{service.icon}</span>
 									<div>
-										<CardTitle>{service.title}</CardTitle>
-										<CardDescription>{service.description}</CardDescription>
+										<CardTitle className='text-black dark:text-white'>
+											{service.title}
+										</CardTitle>
+										<CardDescription className='text-black/70 dark:text-white/70'>
+											{service.description}
+										</CardDescription>
 									</div>
 								</div>
 							</CardHeader>
@@ -67,30 +75,44 @@ export default async function Marketing({
 			</section>
 
 			{/* Strategy Section */}
-			<section className='bg-muted py-12 md:py-24'>
-				<div className='container px-4 md:px-6'>
-					<div className='grid gap-12 lg:grid-cols-2'>
-						<Card>
+			<section className='py-24 bg-gradient-to-b from-white to-forest-50 dark:from-forest-950 dark:to-forest-900'>
+				<div className='container px-4'>
+					<div className='grid gap-8 lg:grid-cols-2'>
+						<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 							<CardHeader>
-								<CardTitle>{t.approach.title}</CardTitle>
+								<CardTitle className='text-black dark:text-white'>
+									{t.approach.title}
+								</CardTitle>
 							</CardHeader>
 							<CardContent>
-								<ul className='space-y-4 text-muted-foreground'>
+								<ul className='space-y-4'>
 									{t.approach.items.map((item: string, index: number) => (
-										<li key={index}>• {item}</li>
+										<li
+											key={index}
+											className='flex items-center text-black/80 dark:text-white/80'>
+											<span className='mr-2'>•</span>
+											{item}
+										</li>
 									))}
 								</ul>
 							</CardContent>
 						</Card>
 
-						<Card>
+						<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 							<CardHeader>
-								<CardTitle>{t.benefits.title}</CardTitle>
+								<CardTitle className='text-black dark:text-white'>
+									{t.benefits.title}
+								</CardTitle>
 							</CardHeader>
 							<CardContent>
-								<ul className='space-y-4 text-muted-foreground'>
+								<ul className='space-y-4'>
 									{t.benefits.items.map((item: string, index: number) => (
-										<li key={index}>• {item}</li>
+										<li
+											key={index}
+											className='flex items-center text-black/80 dark:text-white/80'>
+											<span className='mr-2'>•</span>
+											{item}
+										</li>
 									))}
 								</ul>
 							</CardContent>
@@ -100,37 +122,52 @@ export default async function Marketing({
 			</section>
 
 			{/* Process Section */}
-			<section className='container px-4 md:px-6 py-12 md:py-24'>
-				<Card>
-					<CardHeader>
-						<CardTitle className='text-2xl'>{t.process.title}</CardTitle>
-						<CardDescription>{t.process.subtitle}</CardDescription>
-					</CardHeader>
-					<CardContent className='grid gap-4 md:grid-cols-2'>
-						{t.process.steps.map((step: ProcessStep, index: number) => (
-							<div key={index} className='space-y-2'>
-								<h3 className='font-semibold'>{step.title}</h3>
-								<p className='text-muted-foreground'>{step.description}</p>
-							</div>
-						))}
-					</CardContent>
-				</Card>
+			<section className='py-24 bg-gradient-to-b from-forest-50 to-white dark:from-forest-900 dark:to-forest-950'>
+				<div className='container px-4'>
+					<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
+						<CardHeader>
+							<CardTitle className='text-2xl text-black dark:text-white'>
+								{t.process.title}
+							</CardTitle>
+							<CardDescription className='text-black/70 dark:text-white/70'>
+								{t.process.subtitle}
+							</CardDescription>
+						</CardHeader>
+						<CardContent className='grid gap-6 md:grid-cols-2'>
+							{t.process.steps.map((step: ProcessStep) => (
+								<div
+									key={step.title}
+									className='p-4 rounded-lg bg-forest-50/50 dark:bg-forest-800/50 backdrop-blur-sm'>
+									<h3 className='font-semibold text-black dark:text-white mb-2'>
+										{step.title}
+									</h3>
+									<p className='text-black/80 dark:text-white/80'>
+										{step.description}
+									</p>
+								</div>
+							))}
+						</CardContent>
+					</Card>
+				</div>
 			</section>
 
 			{/* CTA Section */}
-			<section className='py-12 md:py-24'>
-				<div className='container px-4 md:px-6'>
-					<Card className='bg-primary text-primary-foreground'>
+			<section className='py-24'>
+				<div className='container px-4'>
+					<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 						<CardHeader>
-							<CardTitle className='text-2xl md:text-3xl text-center'>
+							<CardTitle className='text-2xl md:text-3xl text-center text-black dark:text-white'>
 								{t.cta.title}
 							</CardTitle>
-							<CardDescription className='text-center text-primary-foreground/80'>
+							<CardDescription className='text-center text-black/70 dark:text-white/70'>
 								{t.cta.description}
 							</CardDescription>
 						</CardHeader>
 						<CardContent className='flex justify-center'>
-							<Button size='lg' variant='secondary' asChild>
+							<Button
+								size='lg'
+								className='bg-forest-600 hover:bg-forest-700 text-white'
+								asChild>
 								<Link href='/about/contact'>{t.cta.button}</Link>
 							</Button>
 						</CardContent>

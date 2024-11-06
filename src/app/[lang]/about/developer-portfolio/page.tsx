@@ -18,15 +18,19 @@ export default async function DeveloperPortfolio({
 	const portfolioText = locales.pages.about.developerPortfolio;
 
 	return (
-		<main className='min-h-screen bg-background'>
+		<main className='min-h-screen'>
 			{/* Hero Section */}
-			<section className='relative py-12 md:py-24'>
-				<div className='container px-4 md:px-6'>
-					<div className='flex flex-col items-center space-y-4 text-center'>
-						<h1 className='text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl'>
+			<section className='relative'>
+				{/* Background with gradient */}
+				<div className='absolute inset-0 bg-gradient-to-b from-forest-50 via-white to-forest-50 dark:from-forest-950 dark:via-forest-900 dark:to-forest-950 -z-10' />
+				<div className='absolute inset-0 opacity-20 bg-[url("/grid-pattern.svg")] -z-10' />
+
+				<div className='container px-4 py-24 md:py-32'>
+					<div className='flex flex-col items-center space-y-6 text-center'>
+						<h1 className='text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-black dark:text-white'>
 							{portfolioText.main.title}
 						</h1>
-						<p className='mx-auto max-w-[700px] text-muted-foreground md:text-xl'>
+						<p className='mx-auto max-w-[700px] text-black/80 dark:text-white/80 text-lg md:text-xl'>
 							{portfolioText.expertise}
 						</p>
 					</div>
@@ -34,23 +38,31 @@ export default async function DeveloperPortfolio({
 			</section>
 
 			{/* Projects Grid */}
-			<section className='container px-4 md:px-6 py-12'>
-				<ProjectsGrid locales={portfolioText.projects} />
+			<section className='bg-gradient-to-b from-white to-forest-50 dark:from-forest-950 dark:to-forest-900'>
+				<div className='container px-4 py-24'>
+					<ProjectsGrid locales={portfolioText.projects} />
+				</div>
 			</section>
 
 			{/* Skills Section */}
-			<section className='bg-muted py-12 md:py-24'>
-				<div className='container px-4 md:px-6'>
-					<Card>
+			<section className='bg-gradient-to-b from-forest-50 to-white dark:from-forest-900 dark:to-forest-950 py-24'>
+				<div className='container px-4'>
+					<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 						<CardHeader>
-							<CardTitle>{portfolioText.skillsTitle}</CardTitle>
-							<CardDescription>{portfolioText.background}</CardDescription>
+							<CardTitle className='text-black dark:text-white'>
+								{portfolioText.skillsTitle}
+							</CardTitle>
+							<CardDescription className='text-black/70 dark:text-white/70'>
+								{portfolioText.background}
+							</CardDescription>
 						</CardHeader>
 						<CardContent>
-							<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
+							<div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
 								{portfolioText.skills.map((skill, index) => (
-									<div key={index} className='space-y-2'>
-										<p className='text-muted-foreground'>{skill}</p>
+									<div
+										key={index}
+										className='p-4 rounded-lg bg-forest-50/50 dark:bg-forest-800/50 backdrop-blur-sm'>
+										<p className='text-black/80 dark:text-white/80'>{skill}</p>
 									</div>
 								))}
 							</div>

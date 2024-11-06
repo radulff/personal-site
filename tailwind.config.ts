@@ -22,8 +22,9 @@ export const theme = {
 			background: 'hsl(var(--background))',
 			foreground: 'hsl(var(--foreground))',
 			primary: {
-				DEFAULT: 'hsl(var(--primary))',
-				foreground: 'hsl(var(--primary-foreground))'
+				DEFAULT: '#3f9c3f',
+				light: '#65b865',
+				dark: '#2f7c2f'
 			},
 			secondary: {
 				DEFAULT: 'hsl(var(--secondary))',
@@ -55,6 +56,24 @@ export const theme = {
 				3: 'hsl(var(--chart-3))',
 				4: 'hsl(var(--chart-4))',
 				5: 'hsl(var(--chart-5))'
+			},
+			forest: {
+				50: '#f3faf3',
+				100: '#e5f5e5',
+				200: '#c8e9c8',
+				300: '#97d397',
+				400: '#65b865',
+				500: '#3f9c3f',
+				600: '#2f7c2f',
+				700: '#276327',
+				800: '#224f22',
+				900: '#1d421d',
+				950: '#0b220b'
+			},
+			surface: {
+				light: '#f3faf3',
+				DEFAULT: '#ffffff',
+				dark: '#0b220b'
 			}
 		},
 		borderRadius: {

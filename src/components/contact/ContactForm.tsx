@@ -111,28 +111,25 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 		<form
 			ref={formRef}
 			onSubmit={handleSubmit}
-			className={cn(
-				'relative overflow-hidden rounded-2xl bg-card p-6',
-				extraclass
-			)}>
+			className={cn('relative overflow-hidden rounded-2xl p-6', extraclass)}>
 			{userStep === 'success' || userStep === 'error' ? (
-				<div className='absolute inset-0 z-50 grid place-content-center bg-background p-6'>
+				<div className='absolute inset-0 z-50 grid place-content-center bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm p-6'>
 					<div className='w-[448px] max-w-md text-center'>
 						<div className='mx-auto my-4 text-6xl'>
 							{userStep === 'success' ? (
-								<CheckCircle className='w-16 h-16 text-green-500' />
+								<CheckCircle className='w-16 h-16 text-forest-600' />
 							) : (
 								<XCircle className='w-16 h-16 text-red-500' />
 							)}
 						</div>
-						<span className='text-base'>
+						<span className='text-base text-black dark:text-white'>
 							{userStep === 'success'
 								? 'Your submit is successful'
 								: 'Your submit has an error'}
 						</span>
 						{userStep === 'error' && (
 							<Button
-								className='mx-auto mt-6 block'
+								className='mx-auto mt-6 block bg-forest-600 hover:bg-forest-700 text-white'
 								onClick={() => setUserStep(null)}>
 								Try Again
 							</Button>
@@ -146,8 +143,8 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 					<label
 						htmlFor='name'
 						className={cn(
-							'text-sm font-medium',
-							form.name.error && 'text-destructive'
+							'text-sm font-medium text-black dark:text-white',
+							form.name.error && 'text-red-500'
 						)}>
 						{locales.labels.name}
 					</label>
@@ -158,7 +155,10 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 						type='text'
 						id='name'
 						name='name'
-						className={cn(form.name.error && 'border-destructive')}
+						className={cn(
+							'bg-white/50 dark:bg-forest-900/50',
+							form.name.error && 'border-red-500'
+						)}
 					/>
 				</div>
 
@@ -166,8 +166,8 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 					<label
 						htmlFor='email'
 						className={cn(
-							'text-sm font-medium',
-							form.email.error && 'text-destructive'
+							'text-sm font-medium text-black dark:text-white',
+							form.email.error && 'text-red-500'
 						)}>
 						{locales.labels.email}
 					</label>
@@ -178,7 +178,10 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 						type='email'
 						id='email'
 						name='email'
-						className={cn(form.email.error && 'border-destructive')}
+						className={cn(
+							'bg-white/50 dark:bg-forest-900/50',
+							form.email.error && 'border-red-500'
+						)}
 					/>
 				</div>
 
@@ -186,8 +189,8 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 					<label
 						htmlFor='subject'
 						className={cn(
-							'text-sm font-medium',
-							form.subject.error && 'text-destructive'
+							'text-sm font-medium text-black dark:text-white',
+							form.subject.error && 'text-red-500'
 						)}>
 						{locales.labels.subject}
 					</label>
@@ -198,7 +201,10 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 						type='text'
 						id='subject'
 						name='subject'
-						className={cn(form.subject.error && 'border-destructive')}
+						className={cn(
+							'bg-white/50 dark:bg-forest-900/50',
+							form.subject.error && 'border-red-500'
+						)}
 					/>
 				</div>
 
@@ -206,8 +212,8 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 					<label
 						htmlFor='message'
 						className={cn(
-							'text-sm font-medium',
-							form.message.error && 'text-destructive'
+							'text-sm font-medium text-black dark:text-white',
+							form.message.error && 'text-red-500'
 						)}>
 						{locales.labels.message}
 					</label>
@@ -219,30 +225,33 @@ const ContactForm = ({ locales, extraclass }: ContactFormProps) => {
 						name='message'
 						rows={4}
 						className={cn(
-							'resize-none',
-							form.message.error && 'border-destructive'
+							'resize-none bg-white/50 dark:bg-forest-900/50',
+							form.message.error && 'border-red-500'
 						)}
 					/>
 				</div>
 
 				<div
-					className='text-xs text-muted-foreground'
+					className='text-xs text-black/60 dark:text-white/60'
 					dangerouslySetInnerHTML={{
 						__html: locales.recaptchaNode
 							.replace(
 								'*LINK:privacy-policy*',
-								`<a href="https://policies.google.com/privacy" class="text-primary hover:underline" rel="noopener noreferrer" target="_blank">`
+								`<a href="https://policies.google.com/privacy" class="text-forest-600 hover:underline" rel="noopener noreferrer" target="_blank">`
 							)
 							.replace('*LINK*', `</a>`)
 							.replace(
 								'*LINK:terms*',
-								`<a href="https://policies.google.com/terms" class="text-primary hover:underline" rel="noopener noreferrer" target="_blank">`
+								`<a href="https://policies.google.com/terms" class="text-forest-600 hover:underline" rel="noopener noreferrer" target="_blank">`
 							)
 							.replace('*LINK*', `</a>`)
 					}}
 				/>
 
-				<Button type='submit' className='w-full' disabled={userStep !== null}>
+				<Button
+					type='submit'
+					className='w-full bg-forest-600 hover:bg-forest-700 text-white'
+					disabled={userStep !== null}>
 					{locales.buttonSubmit}
 				</Button>
 			</div>

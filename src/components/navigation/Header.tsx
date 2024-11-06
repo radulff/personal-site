@@ -55,12 +55,12 @@ const Header: React.FC<Props> = ({ locales }) => {
 	];
 
 	return (
-		<header className='mx-auto max-w-screen-2xl md:px-24 xs:px-6 px-4'>
+		<header className='mx-auto max-w-screen-2xl md:px-24 xs:px-6 px-4 bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-b border-forest-100 dark:border-forest-800'>
 			<nav className='grid md:h-24 h-16 md:grid-cols-[1fr,max-content,1fr] grid-cols-[1fr,max-content,max-content] content-center'>
 				<Button
 					variant='ghost'
 					asChild
-					className='flex md:w-48 w-32 md:p-4 p-3'>
+					className='flex md:w-48 w-32 md:p-4 p-3 hover:bg-forest-50 dark:hover:bg-forest-800/50'>
 					<Link href={'/'}>
 						<Image
 							src={whiteLogo}
@@ -77,7 +77,11 @@ const Header: React.FC<Props> = ({ locales }) => {
 						{navItems.map(item => (
 							<NavigationMenuItem key={item.path}>
 								<Link href={item.path} legacyBehavior passHref>
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+									<NavigationMenuLink
+										className={
+											navigationMenuTriggerStyle() +
+											' text-black dark:text-white hover:bg-forest-50 dark:hover:bg-forest-800/50'
+										}>
 										{item.label}
 									</NavigationMenuLink>
 								</Link>
@@ -88,14 +92,14 @@ const Header: React.FC<Props> = ({ locales }) => {
 
 				{/* Mobile Menu */}
 				{showMenu && (
-					<div className='absolute top-16 left-0 w-full bg-white z-50 md:hidden'>
-						<nav className='flex flex-col p-4'>
+					<div className='absolute top-16 left-0 w-full bg-white/95 dark:bg-forest-900/95 backdrop-blur-sm z-50 md:hidden'>
+						<nav className='flex flex-col p-4 border-t border-forest-100 dark:border-forest-800'>
 							{navItems.map(item => (
 								<Button
 									key={item.path}
 									variant='ghost'
 									asChild
-									className='w-full justify-start'>
+									className='w-full justify-start text-black dark:text-white hover:bg-forest-50 dark:hover:bg-forest-800/50'>
 									<Link href={item.path}>{item.label}</Link>
 								</Button>
 							))}
@@ -106,14 +110,14 @@ const Header: React.FC<Props> = ({ locales }) => {
 				<Button
 					variant='default'
 					asChild
-					className='mr-4 w-fit place-self-end self-center min-w-max'>
+					className='mr-4 w-fit place-self-end self-center min-w-max bg-forest-600 hover:bg-forest-700 text-white'>
 					<Link href={'/about/contact'}>{locales.cta}</Link>
 				</Button>
 
 				<Button
 					variant='ghost'
 					size='icon'
-					className='place-self-end self-center p-0.5 md:hidden'
+					className='place-self-end self-center p-0.5 md:hidden hover:bg-forest-50 dark:hover:bg-forest-800/50'
 					onClick={toggleMenu}>
 					<svg
 						width='15'

@@ -52,15 +52,18 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 
 	if (!project || !dictionary) {
 		return (
-			<div className='container mx-auto px-4 py-12'>
-				<Card>
-					<CardContent className='flex flex-col items-center justify-center min-h-[400px]'>
-						<p className='text-muted-foreground'>
-							{dictionary?.pages?.about?.developerPortfolio?.loadingProject ||
-								'Loading project details...'}
-						</p>
-					</CardContent>
-				</Card>
+			<div className='min-h-screen relative'>
+				<div className='absolute inset-0 bg-gradient-to-b from-forest-50 via-white to-forest-50 dark:from-forest-950 dark:via-forest-900 dark:to-forest-950 -z-10' />
+				<div className='container mx-auto px-4 py-24'>
+					<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
+						<CardContent className='flex flex-col items-center justify-center min-h-[400px]'>
+							<p className='text-black/60 dark:text-white/60'>
+								{dictionary?.pages?.about?.developerPortfolio?.loadingProject ||
+									'Loading project details...'}
+							</p>
+						</CardContent>
+					</Card>
+				</div>
 			</div>
 		);
 	}
@@ -68,35 +71,52 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 	const portfolioText = dictionary.pages.about.developerPortfolio;
 
 	return (
-		<main className='min-h-screen bg-background'>
-			<div className='container mx-auto px-4 py-12'>
-				<Card>
+		<main className='min-h-screen relative'>
+			<div className='absolute inset-0 bg-gradient-to-b from-forest-50 via-white to-forest-50 dark:from-forest-950 dark:via-forest-900 dark:to-forest-950 -z-10' />
+			<div className='absolute inset-0 opacity-20 bg-[url("/grid-pattern.svg")] -z-10' />
+
+			<div className='container mx-auto px-4 py-24'>
+				<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 					<CardHeader>
-						<CardTitle>{project.title}</CardTitle>
-						<CardDescription>{project.description}</CardDescription>
+						<CardTitle className='text-black dark:text-white'>
+							{project.title}
+						</CardTitle>
+						<CardDescription className='text-black/70 dark:text-white/70'>
+							{project.description}
+						</CardDescription>
 					</CardHeader>
-					<CardContent className='space-y-6'>
-						<div className='grid gap-4 md:grid-cols-2'>
+					<CardContent className='space-y-8'>
+						<div className='grid gap-8 md:grid-cols-2'>
 							{project.technologies && (
-								<div>
-									<h3 className='font-semibold mb-2'>
+								<div className='p-6 rounded-lg bg-forest-50/50 dark:bg-forest-800/50 backdrop-blur-sm'>
+									<h3 className='font-semibold mb-4 text-black dark:text-white'>
 										{portfolioText.technologiesUsed}
 									</h3>
-									<ul className='list-disc list-inside text-muted-foreground'>
+									<ul className='space-y-2'>
 										{project.technologies.map((tech, index) => (
-											<li key={index}>{tech}</li>
+											<li
+												key={index}
+												className='text-black/80 dark:text-white/80 flex items-center'>
+												<span className='mr-2'>•</span>
+												{tech}
+											</li>
 										))}
 									</ul>
 								</div>
 							)}
 							{project.features && (
-								<div>
-									<h3 className='font-semibold mb-2'>
+								<div className='p-6 rounded-lg bg-forest-50/50 dark:bg-forest-800/50 backdrop-blur-sm'>
+									<h3 className='font-semibold mb-4 text-black dark:text-white'>
 										{portfolioText.keyFeatures}
 									</h3>
-									<ul className='list-disc list-inside text-muted-foreground'>
+									<ul className='space-y-2'>
 										{project.features.map((feature, index) => (
-											<li key={index}>{feature}</li>
+											<li
+												key={index}
+												className='text-black/80 dark:text-white/80 flex items-center'>
+												<span className='mr-2'>•</span>
+												{feature}
+											</li>
 										))}
 									</ul>
 								</div>
@@ -105,7 +125,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({
 
 						{project.link && (
 							<div className='flex justify-center pt-4'>
-								<Button asChild>
+								<Button
+									className='bg-forest-600 hover:bg-forest-700 text-white'
+									asChild>
 									<Link
 										href={project.link}
 										target='_blank'

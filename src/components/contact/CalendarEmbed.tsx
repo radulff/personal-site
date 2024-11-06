@@ -9,9 +9,9 @@ interface CalendarEmbedProps {
 
 const CalendarEmbed = ({ title }: CalendarEmbedProps) => {
 	return (
-		<Card className='w-auto mx-auto h-auto'>
+		<Card className='bg-white/80 dark:bg-forest-900/80 backdrop-blur-sm border-forest-100 dark:border-forest-800'>
 			<CardHeader>
-				<CardTitle>{title}</CardTitle>
+				<CardTitle className='text-black dark:text-white'>{title}</CardTitle>
 			</CardHeader>
 			<CardContent>
 				<div className='aspect-video w-full rounded-lg overflow-hidden'>
