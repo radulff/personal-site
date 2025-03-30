@@ -2,6 +2,7 @@ import React from 'react';
 import { Inter } from 'next/font/google';
 import '../../app/globals.css';
 import { i18n, type Locale } from '../../../i18nConfig';
+import Footer from '@/components/navigation/Footer';
 import Header from '@/components/navigation/Header';
 import { getDictionary } from '@/lib/getDictionary';
 import logo from '/public/images/logo.png';
@@ -116,6 +117,7 @@ export default async function RootLayout({
 					disableTransitionOnChange>
 					<Header locales={dictionary.layout.header} />
 					{children}
+					<Footer dictionary={dictionary.layout.footer} />
 				</ThemeProvider>
 			</body>
 		</html>

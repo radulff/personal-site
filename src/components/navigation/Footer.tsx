@@ -203,7 +203,7 @@ const Footer: React.FC<{ dictionary: any }> = ({ dictionary }) => {
 
 				{/* Copyright - Right on desktop, bottom on mobile */}
 				<div className='order-3 md:order-3 text-sm text-black/60 dark:text-white/60'>
-					Copyright 2024 Raül Vila©
+					Copyright 2025 Raül Vila©
 				</div>
 			</div>
 		</footer>
